@@ -1,0 +1,554 @@
+variant.chr (char)      Chromosome name (VARCHAR)
+variant.pos (int)       Position (INT, 1-based)
+variant.ref (char)      Reference allele (VARCHAR, - for missing allele of an
+                        insertion)
+variant.alt (char)      Alternative allele (VARCHAR, - for missing allele of an
+                        deletion)
+dbSNP.chr (char)
+dbSNP.pos (int)
+dbSNP.name (char)       DB SNP ID (rsname)
+dbSNP.ref (char)        Reference allele (as on the + strand)
+dbSNP.alt (char)        Alternative allele (as on the + strand)
+dbSNP.FILTER (char)     Inconsistent Genotype Submission For At Least One Sample
+dbSNP.RS (int)          dbSNP ID (i.e. rs number)
+dbSNP.RSPOS (int)       Chr position reported in dbSNP
+dbSNP.RV (int)          RS orientation is reversed
+dbSNP.VP (char)         Variation Property.  Documentation is at
+                        ftp://ftp.ncbi.nlm.nih.gov/snp/specs/dbSNP_BitField_late
+                        st.pdf
+dbSNP.GENEINFO (char)   Pairs each of gene symbol:gene id.  The gene symbol and
+                        id are delimited by a colon (:) and each pair is
+                        delimited by a vertical bar (|)
+dbSNP.dbSNPBuildID (int)
+                        First dbSNP Build for RS
+dbSNP.SAO (int)         Variant Allele Origin: 0 - unspecified, 1 - Germline, 2
+                        - Somatic, 3 - Both
+dbSNP.SSR (int)         Variant Suspect Reason Codes (may be more than one value
+                        added together) 0 - unspecified, 1 - Paralog, 2 - byEST,
+                        4 - oldAlign, 8 - Para_EST, 16 - 1kg_failed, 1024 -
+                        other
+dbSNP.WGT (int)         Weight, 00 - unmapped, 1 - weight 1, 2 - weight 2, 3 -
+                        weight 3 or more
+dbSNP.VC (char)         Variation Class
+dbSNP.PM_flag (int)     Variant is Precious(Clinical,Pubmed Cited)
+dbSNP.TPA_flag (int)    Provisional Third Party Annotation(TPA) (currently rs
+                        from PHARMGKB who will give phenotype data)
+dbSNP.PMC_flag (int)    Links exist to PubMed Central article
+dbSNP.S3D_flag (int)    Has 3D structure - SNP3D table
+dbSNP.SLO_flag (int)    Has SubmitterLinkOut - From SNP->SubSNP->Batch.link_out
+dbSNP.NSF_flag (int)    Has non-synonymous frameshift A coding region variation
+                        where one allele in the set changes all downstream amino
+                        acids. FxnClass = 44
+dbSNP.NSM_flag (int)    Has non-synonymous missense A coding region variation
+                        where one allele in the set changes protein peptide.
+                        FxnClass = 42
+dbSNP.NSN_flag (int)    Has non-synonymous nonsense A coding region variation
+                        where one allele in the set changes to STOP codon (TER).
+                        FxnClass = 41
+dbSNP.REF_flag_flag (int)
+                        Has reference A coding region variation where one allele
+                        in the set is identical to the reference sequence.
+                        FxnCode = 8
+dbSNP.SYN_flag (int)    Has synonymous A coding region variation where one
+                        allele in the set does not change the encoded amino
+                        acid. FxnCode = 3
+dbSNP.U3_flag (int)     In 3' UTR Location is in an untranslated region (UTR).
+                        FxnCode = 53
+dbSNP.U5_flag (int)     In 5' UTR Location is in an untranslated region (UTR).
+                        FxnCode = 55
+dbSNP.ASS_flag (int)    In acceptor splice site FxnCode = 73
+dbSNP.DSS_flag (int)    In donor splice-site FxnCode = 75
+dbSNP.INT_flag (int)    In Intron FxnCode = 6
+dbSNP.R3_flag (int)     In 3' gene region FxnCode = 13
+dbSNP.R5_flag (int)     In 5' gene region FxnCode = 15
+dbSNP.OTH_flag (int)    Has other variant with exactly the same set of mapped
+                        positions on NCBI refernce assembly.
+dbSNP.CFL_flag (int)    Has Assembly conflict. This is for weight 1 and 2
+                        variant that maps to different chromosomes on different
+                        assemblies.
+dbSNP.ASP_flag (int)    Is Assembly specific. This is set if the variant only
+                        maps to one assembly
+dbSNP.MUT_flag (int)    Is mutation (journal citation, explicit fact): a low
+                        frequency variation that is cited in journal and other
+                        reputable sources
+dbSNP.VLD_flag (int)    Is Validated.  This bit is set if the variant has 2+
+                        minor allele count based on frequency or genotype data.
+dbSNP.G5A_flag (int)    >5% minor allele frequency in each and all populations
+dbSNP.G5_flag (int)     >5% minor allele frequency in 1+ populations
+dbSNP.HD_flag (int)     Marker is on high density genotyping kit (50K density or
+                        greater).  The variant may have phenotype associations
+                        present in dbGaP.
+dbSNP.GNO_flag (int)    Genotypes available. The variant has individual genotype
+                        (in SubInd table).
+dbSNP.KGValidated_flag (int)
+                        1000 Genome validated
+dbSNP.KGPhase1_flag (int)
+                        1000 Genome phase 1 (incl. June Interim phase 1)
+dbSNP.KGPilot123_flag (int)
+                        1000 Genome discovery all pilots 2010(1,2,3)
+dbSNP.KGPROD_flag (int) Has 1000 Genome submission
+dbSNP.OTHERKG_flag (int)
+                        non-1000 Genome submission
+dbSNP.PH3_flag (int)    HAP_MAP Phase 3 genotyped: filtered, non-redundant
+dbSNP.CDA_flag (int)    Variation is interrogated in a clinical diagnostic assay
+dbSNP.LSD_flag (int)    Submitted from a locus-specific database
+dbSNP.MTP_flag (int)    Microattribution/third-party annotation(TPA:GWAS,PAGE)
+dbSNP.OM_flag (int)     Has OMIM/OMIA
+dbSNP.NOC_flag (int)    Contig allele not present in variant allele list. The
+                        reference sequence allele at the mapped position is not
+                        present in the variant allele list, adjusted for
+                        orientation.
+dbSNP.WTD_flag (int)    Is Withdrawn by submitter If one member ss is withdrawn
+                        by submitter, then this bit is set.  If all member ss'
+                        are withdrawn, then the rs is deleted to SNPHistory
+dbSNP.NOV_flag (int)    Rs cluster has non-overlapping allele sets. True when rs
+                        set has more than 2 alleles from different submissions
+                        and these sets share no alleles in common.
+dbSNP.CAF (char)        An ordered, comma delimited list of allele frequencies
+                        based on 1000Genomes, starting with the reference allele
+                        followed by alternate alleles as ordered in the ALT
+                        column. Where a 1000Genomes alternate allele is not in
+                        the dbSNPs alternate allele set, the allele is added to
+                        the ALT column.  The minor allele is the second largest
+                        value in the list, and was previuosly reported in VCF as
+                        the GMAF.  This is the GMAF reported on the RefSNP and
+                        EntrezSNP pages and VariationReporter
+dbSNP.COMMON (int)      RS is a common SNP.  A common SNP is one that has at
+                        least one 1000Genomes population with a minor allele of
+                        frequency >= 1% and for which 2 or more founders
+                        contribute to that minor allele frequency.
+dbSNP.CLNHGVS (char)    Variant names from HGVS.    The order of these variants
+                        corresponds to the order of the info in the other
+                        clinical  INFO tags.
+dbSNP.CLNALLE (int)     Variant alleles from REF or ALT columns.  0 is REF, 1 is
+                        the first ALT allele, etc.  This is used to match
+                        alleles with other corresponding clinical (CLN) INFO
+                        tags.  A value of -1 indicates that no allele was found
+                        to match a corresponding HGVS allele name.
+dbSNP.CLNSRC (char)     Variant Clinical Chanels
+dbSNP.CLNORIGIN (char)  Allele Origin. One or more of the following values may
+                        be added: 0 - unknown; 1 - germline; 2 - somatic; 4 -
+                        inherited; 8 - paternal; 16 - maternal; 32 - de-novo; 64
+                        - biparental; 128 - uniparental; 256 - not-tested; 512 -
+                        tested-inconclusive; 1073741824 - other
+dbSNP.CLNSRCID (char)   Variant Clinical Channel IDs
+dbSNP.CLNSIG (char)     Variant Clinical Significance, 0 - unknown, 1 -
+                        untested, 2 - non-pathogenic, 3 - probable-non-
+                        pathogenic, 4 - probable-pathogenic, 5 - pathogenic, 6 -
+                        drug-response, 7 - histocompatibility, 255 - other
+dbSNP.CLNDSDB (char)    Variant disease database name
+dbSNP.CLNDSDBID (char)  Variant disease database ID
+dbSNP.CLNDBN (char)     Variant disease name
+dbSNP.CLNACC (char)     Variant Accession and Versions
+dbNSFP.chr (char)       Chromosome number
+dbNSFP.pos (int)        physical position on the chromosome as to hg19 (1-based
+                        coordinate)
+dbNSFP.ref (char)       Reference nucleotide allele (as on the + strand)
+dbNSFP.alt (char)       Alternative nucleotide allele (as on the + strand)
+dbNSFP.aaref (char)     reference amino acid
+dbNSFP.aaalt (char)     alternative amino acid
+dbNSFP.hg18_pos (int)   physical position on the chromosome as to hg19 (1-based
+                        coordinate)
+dbNSFP.genename (char)  common gene name, if the NScan be assigned to multiple
+                        genes, gene names are separated by ";"
+dbNSFP.Uniprot_acc (char)
+                        Uniprot accession number. Multiple entries separated by
+                        ";".
+dbNSFP.Uniprot_id (char)
+                        Uniprot ID number. Multiple entries separated by ";".
+dbNSFP.Uniprot_aapos (char)
+                        amino acid position as to Uniprot. Multiple entries
+                        separated by ";".
+dbNSFP.Interpro_domain (char)
+                        Interpro_domain: domain or conserved site on which the
+                        variant locates. Domain annotations come from Interpro
+                        database. The number in the brackets following a
+                        specific domain is the count of times Interpro assigns
+                        the variant position to that domain, typically coming
+                        from different predicting databases. Multiple entries
+                        separated by ";".
+dbNSFP.cds_strand (char)
+                        coding sequence (CDS) strand (+ or -)
+dbNSFP.refcodon (char)  reference codon
+dbNSFP.SLR_test_statistic (float)
+                        SLR test statistic for testing natural selection on
+                        codons. A negative value indicates negative selection,
+                        and a positive value indicates positive selection.
+                        Larger magnitude of the value suggests stronger
+                        evidence.
+dbNSFP.codonpos (char)  position on the codon (1, 2 or 3), multiple entries are
+                        separated by
+dbNSFP.fold_degenerate (char)
+                        A list of degenerate type (0, 2 or 3), separated by
+dbNSFP.Ancestral_allele (char)
+                        Ancestral allele (based on 1000 genomes reference data).
+                        The following comes from its original README file: ACTG
+                        - high-confidence call, ancestral state supproted by the
+                        other two sequences actg - low-confindence call,
+                        ancestral state supported by one sequence only N    -
+                        failure, the ancestral state is not supported by any
+                        other sequence -    - the extant species contains an
+                        insertion at this postion .    - no coverage in the
+                        alignment
+dbNSFP.Ensembl_geneid (char)
+                        Ensembl gene id
+dbNSFP.Ensembl_transcriptid (char)
+                        Ensembl transcript ids (separated by ";")
+dbNSFP.aapos (char)     amino acid position as to the protein "-1" if the
+                        variant is a splicing site SNP (2bp on each end of an
+                        intron), Multiple values separated by
+dbNSFP.aapos_SIFT (char)
+                        ENSP id and amino acid positions corresponding to SIFT
+                        scores. Multiple entries separated by ";"
+dbNSFP.aapos_FATHMM (char)
+                        aapos_FATHMM: ENSP id and amino acid positions
+                        corresponding to FATHMM scores. Multiple entries
+                        separated by ";"
+dbNSFP.SIFT_score (float)
+                        The same as SIFT_score_all but is of type FLOAT and is
+                        the minimal score when multiple scores are available.
+dbNSFP.SIFT_score_all (char)
+                        SIFT scores. If a score is smaller than 0.05 the
+                        corresponding NS is predicted as "D(amaging)"; otherwise
+                        it is predicted as "T(olerated)". Multiple scores are
+                        separated by ;
+dbNSFP.SIFT_score_rankscore (float)
+                        Original scores were first converted to
+                        SIFTnew=1-SIFTori, then ranked among all SIFTnew scores
+                        in dbNSFP. The rankscore is the ratio of the rank the
+                        SIFTnew score over the total number of SIFTnew scores in
+                        dbNSFP. If there are multiple scores, only the most
+                        damaging (largest) rankscore is presented. The
+                        rankscores range from 0.02654 to 0.87932.
+dbNSFP.SIFT_pred (char) "D" if "D" appears in SIFT_pred_all, "T" otherwise.
+dbNSFP.SIFT_pred_all (char)
+                        If SIFTori is smaller than 0.05 (SIFTnew>0.95) the
+                        corresponding NS is predicted as "D(amaging)"; otherwise
+                        it is predicted as "T(olerated)".
+dbNSFP.Polyphen2_HDIV_score (float)
+                        The maximum (most damaging) value of Polyphen2 score
+                        based on HumDiv, i.e. hdiv_prob. Use
+                        Polyphen2_HDIV_score_all to get a list of all scores.
+dbNSFP.Polyphen2_HDIV_score_all (char)
+                        Polyphen2 score based on HumDiv, i.e. hdiv_prob. The
+                        score ranges from 0 to 1, and the corresponding
+                        prediction is "probably damaging" if it is in [0.957,1];
+                        "possibly damaging" if it is in [0.453,0.956]; "benign"
+                        if it is in [0,0.452]. Score cutoff for binary
+                        classification is 0.5, i.e. the prediction is "neutral"
+                        if the score is smaller than 0.5 and "deleterious" if
+                        the score is larger than 0.5. Multiple entries separated
+                        by ";".
+dbNSFP.Polyphen2_HDIV_rankscore (char)
+                        Polyphen2 HDIV scores were first ranked among all HDIV
+                        scores in dbNSFP. The rankscore is the ratio of the rank
+                        the score over the total number of the scores in dbNSFP.
+                        If there are multiple scores, only the most damaging
+                        (largest) rankscore is presented. The scores range from
+                        0.02656 to 0.89917.
+dbNSFP.Polyphen2_HDIV_pred (char)
+                        "D" if any of the predictions in Polyphen2_HDIV_pred_all
+                        is "D". Otherwise it can be "P" is any prediction is
+                        "P", or "B" is any prediction if "B".
+dbNSFP.Polyphen2_HDIV_pred_all (char)
+                        Polyphen2 prediction based on HumDiv, "D" ("probably
+                        damaging"), "P" ("possibly damaging") and "B"
+                        ("benign"). Multiple entries separated by ";". Because
+                        the availability of multiple values, use field
+                        Polyphen2_HDIV_pred = 'D' to locate possibly damaging
+                        variants.
+dbNSFP.Polyphen2_HVAR_score (float)
+                        The maximum (most damaging) value of all Polyphen2 score
+                        based on HumVar, i.e. hvar_prob. Use
+                        Polyphen2_HVAR_score_all to get a list of all scores.
+dbNSFP.Polyphen2_HVAR_score_all (char)
+                        Polyphen2 scores based on HumVar, i.e. hvar_prob. The
+                        score ranges from 0 to 1, and the corresponding
+                        prediction is "probably damaging" if it is in [0.909,1];
+                        "possibly damaging" if it is in [0.447,0.908]; "benign"
+                        if it is in [0,0.446]. Score cutoff for binary
+                        classification is 0.5, i.e. the prediction is "neutral"
+                        if the score is smaller than 0.5 and "deleterious" if
+                        the score is larger than 0.5. Multiple entries separated
+                        by ";".
+dbNSFP.Polyphen2_HVAR_rankscore (char)
+                        Polyphen2 HVAR scores were first ranked among all HVAR
+                        scores in dbNSFP. The rankscore is the ratio of the rank
+                        the score over the total number of the scores in dbNSFP.
+                        If there are multiple scores, only the most damaging
+                        (largest) rankscore is presented. The scores range from
+                        0.01281 to 0.9711.
+dbNSFP.Polyphen2_HVAR_pred (char)
+                        "D" if any of the predictions in Polyphen2_HVAR_pred_all
+                        is "D". Otherwise it can be "P" is any prediction is
+                        "P", or "B" is any prediction if "B".
+dbNSFP.Polyphen2_HVAR_pred_all (char)
+                        Polyphen2 prediction based on HumVar, "D" ("porobably
+                        damaging", HVAR score in [0.909,1] or rankscore in
+                        [0.62955,0.9711]), "P" ("possibly damaging", HVAR in
+                        [0.447,0.908] or rankscore in [0.44359,0.62885]) and "B"
+                        ("benign", HVAR score in [0,0.446] or rankscore in
+                        [0.01281,0.44315]). Score cutoff for binary
+                        classification is 0.5 for HVAR score or 0.45998 for
+                        rankscore, i.e. the prediction is "neutral" if the HVAR
+                        score is smaller than 0.5 (rankscore is smaller than
+                        0.45998), and "deleterious" if the HVAR score is larger
+                        than 0.5 (rankscore is larger than 0.45998). Multiple
+                        entries are separated by ";".
+dbNSFP.LRT_score (float)
+                        The original LRT two-sided p-value (LRTori).
+dbNSFP.LRT_converted_rankscore (float)
+                        LRTori scores were first converted as
+                        LRTnew=1-LRTori*0.5 if Omega<1, or LRTnew=LRTori*0.5 if
+                        Omega>=1. Then LRTnew scores were ranked among all
+                        LRTnew scores in dbNSFP. The rankscore is the ratio of
+                        the rank over the total number of the scores in dbNSFP.
+                        The scores range from 0.00166 to 0.85682.
+dbNSFP.LRT_pred (char)  LRT prediction, D(eleterious), N(eutral) or U(nknown)
+dbNSFP.MutationTaster_score (float)
+                        MutationTaster score
+dbNSFP.MutationTaster_converted_rankscore (float)
+                        The MTori scores were first converted: if the prediction
+                        is "A" or "D" MTnew=MTori; if the prediction is "N" or
+                        "P", MTnew=1-MTori. Then MTnew scores were ranked among
+                        all MTnew scores in dbNSFP. The rankscore is the ratio
+                        of the rank of the score over the total number of MTnew
+                        scores in dbNSFP. The scores range from 0.0931 to
+                        0.80722.
+dbNSFP.MutationTaster_pred (char)
+                        MutationTaster prediction, "A"
+                        ("disease_causing_automatic"), "D" ("disease_causing"),
+                        "N" ("polymorphism") or "P" ("polymorphism_automatic").
+                        The score cutoff between "D" and "N" is 0.5 for MTori
+                        and 0.328 for the rankscore.
+dbNSFP.MutationAssessor_score (float)
+                        MutationAssessor functional impact combined score
+                        (MAori). The score ranges from -5.545 to 5.975 in
+                        dbNSFP. Please refer to Reva et al. (2011) Nucl. Acids
+                        Res. 39(17):e118 for details.
+dbNSFP.MutationAssessor_rankscore (float)
+                        MAori scores were ranked among all MAori scores in
+                        dbNSFP. The rankscore is the ratio of the rank of the
+                        score over the total number of MAori scores in dbNSFP.
+                        The scores range from 0 to 1.
+dbNSFP.MutationAssessor_pred (char)
+                        MutationAssessor's functional impact of a variant :
+                        predicted functional, i.e. high ("H") or medium ("M"),
+                        or predicted non-functional, i.e. low ("L") or neutral
+                        ("N"). The MAori score cutoffs between "H" and "M", "M"
+                        and "L", and "L" and "N", are 3.5, 1.9 and 0.8,
+                        respectively. The rankscore cutoffs between "H" and "M",
+                        "M" and "L", and "L" and "N", are 0.9416, 0.61387 and
+                        0.26162, respectively.
+dbNSFP.FATHMM_score (float)
+                        Mimimal (more damaging) scores of the multiple scores
+                        reported by FATHMM_score_all
+dbNSFP.FATHMM_score_all (char)
+                        FATHMM default score (weighted for human inherited-
+                        disease mutations with Disease Ontology) (FATHMMori).
+                        Scores range from -18.09 to 11.0. Multiple scores
+                        separated by ";" Please refer to Shihab et al. (2013)
+                        Human Mutation 34(1):57-65 for details.
+dbNSFP.FATHMM_rankscore (float)
+                        FATHMMori scores were ranked among all FATHMMori scores
+                        in dbNSFP. The rankscore is the ratio of the rank of the
+                        score over the total number of FATHMMori scores in
+                        dbNSFP. If there are multiple scores, only the most
+                        damaging (largest) rankscore is presented. The scores
+                        range from 0 to 1.
+dbNSFP.FATHMM_pred (char)
+                        "D" is any of the prediction of FATHMM_pred_all is "D"
+dbNSFP.FATHMM_pred_all (char)
+                        If a FATHMMori score is <=-1.5 (or rankscore <=0.81415)
+                        the corresponding NS is predicted as "D(AMAGING)";
+                        otherwise it is predicted as "T(OLERATED)". Multiple
+                        predictions separated by ";"
+dbNSFP.RadialSVM_score (float)
+                        Our support vector machine (SVM) based ensemble
+                        prediction score, which incorporated 10 scores (SIFT,
+                        PolyPhen-2 HDIV, PolyPhen-2 HVAR, GERP++,
+                        MutationTaster, Mutation Assessor, FATHMM, LRT, SiPhy,
+                        PhyloP) and the maximum frequency observed in the 1000
+                        genomes populations. Larger value means the SNV is more
+                        likely to be damaging. The threshold seperationg
+                        "T(olerated)" and "D(amaging)" is 0.
+dbNSFP.RadialSVM_rankscore (float)
+                        RadialSVM scores were ranked among all RadialSVM scores
+                        in dbNSFP. The rankscore is the ratio of the rank of the
+                        screo over the total number of RadialSVM scores in
+                        dbNSFP. The scores range from 0 to 1.
+dbNSFP.RadialSVM_pred (char)
+                        Prediction of our SVM based ensemble prediction
+                        score,"T(olerated)" or "D(amaging)". The score cutoff
+                        between "D" and "T" is 0. The rankscore cutoff between
+                        "D" and "T" is 0.83357.
+dbNSFP.LR_score (float) Our logistic regression (LR) based ensemble prediction
+                        score, which incorporated 10 scores (SIFT, PolyPhen-2
+                        HDIV, PolyPhen-2 HVAR, GERP++, MutationTaster, Mutation
+                        Assessor, FATHMM, LRT, SiPhy, PhyloP) and the maximum
+                        frequency observed in the 1000 genomes populations.
+                        Larger value means the SNV is more likely to be
+                        damaging. The threshold seperationg "T(olerated)" and
+                        "D(amaging)" is 0.5.
+dbNSFP.LR_rankscore (float)
+                        LR scores were ranked among all LR scores in dbNSFP. The
+                        rankscore is the ratio of the rank of the score over the
+                        total number of LR scores in dbNSFP. The scores range
+                        from 0 to 1.
+dbNSFP.LR_pred (char)   Prediction of our LR based ensemble prediction
+                        score,"T(olerated)" or "D(amaging)".
+dbNSFP.Reliability_index (float)
+                        Number of observed component scores (except the maximum
+                        frequency in the 1000 genomes populations) for RadialSVM
+                        and LR. Ranges from 1 to 10. As RadialSVM and LR scores
+                        are calculated based on imputed data, the less missing
+                        component scores, the higher the reliability of the
+                        scores and predictions.
+dbNSFP.CADD_raw (float) : CADD raw score for funtional prediction of a SNP.
+                        Please refer to Kircher et al. (2014) Nature Genetics
+                        46(3):310-5 for details. The larger the score the more
+                        likely the SNP has damaging effect.
+dbNSFP.CADD_raw_rankscore (float)
+                        CADD raw scores were ranked among all CADD raw scores in
+                        dbNSFP. The rankscore is the ratio of the rank of the
+                        score over the total number of CADD raw scores in
+                        dbNSFP.
+dbNSFP.CADD_phred (float)
+                        CADD phred-scaled score
+dbNSFP.GERP_NR (float)  GERP++ neutral rate
+dbNSFP.GERP_RS (float)  GERP++ RS score, the larger the score, the more
+                        conserved the site.
+dbNSFP.GERP_RS_rankscore (float)
+                        GERP++ RS scores were ranked among all GERP++ RS scores
+                        in dbNSFP. The rankscore is the ratio of the rank of the
+                        score over the total number of GERP++ RS scores in
+                        dbNSFP.
+dbNSFP.phyloP46way_primate (float)
+                        phyloP (phylogenetic p-values) conservation score based
+                        on the multiple alignments of 10 primate genomes
+                        (including human). The larger the score, the more
+                        conserved the site.
+dbNSFP.phyloP46way_primate_rankscore (float)
+                        phyloP46way_primate scores were ranked among all
+                        phyloP46way_primate scores in dbNSFP. The rankscore is
+                        the ratio of the rank of the score over the total number
+                        of phyloP46way_primate scores in dbNSFP.
+dbNSFP.phyloP46way_placental (float)
+                        phyloP (phylogenetic p-values) conservation score based
+                        on the multiple alignments of 33 placental mammal
+                        genomes (including human). The larger the score, the
+                        more conserved the site.
+dbNSFP.phyloP46way_placental_rankscore (float)
+                        phyloP46way_placental scores were ranked among all
+                        phyloP46way_placental scores in dbNSFP. The rankscore is
+                        the ratio of the rank of the score over the total number
+                        of phyloP46way_placental scores in dbNSFP.
+dbNSFP.phyloP100way_vertebrate (float)
+                        phyloP (phylogenetic p-values) conservation score based
+                        on the multiple alignments of 100 vertebrate genomes
+                        (including human). The larger the score, the more
+                        conserved the site.
+dbNSFP.phyloP100way_vertebrate_rankscore (float)
+                        phyloP100way_vertebrate scores were ranked among all
+                        phyloP100way_vertebrate scores in dbNSFP. The rankscore
+                        is the ratio of the rank of the score over the total
+                        number of phyloP100way_vertebrate scores in dbNSFP.
+dbNSFP.phastCons46way_primate (float)
+                        phastCons conservation score based on the multiple
+                        alignments of 10 primate genomes (including human). The
+                        larger the score, the more conserved the site.
+dbNSFP.phastCons46way_primate_rankscore (float)
+                        phastCons46way_primate scores were ranked among all
+                        phastCons46way_primate scores in dbNSFP. The rankscore
+                        is the ratio of the rank of the score over the total
+                        number of phastCons46way_primate scores in dbNSFP.
+dbNSFP.phastCons46way_placental (float)
+                        phastCons conservation score based on the multiple
+                        alignments of 33 placental mammal genomes (including
+                        human). The larger the score, the more conserved the
+                        site.
+dbNSFP.phastCons46way_placental_rankscore (float)
+                        phastCons46way_placental scores were ranked among all
+                        phastCons46way_placental scores in dbNSFP. The rankscore
+                        is the ratio of the rank of the score over the total
+                        number of phastCons46way_placental scores in dbNSFP.
+dbNSFP.phastCons100way_vertebrate (float)
+                        phastCons conservation score based on the multiple
+                        alignments of 100 vertebrate genomes (including human).
+                        The larger the score, the more conserved the site.
+dbNSFP.phastCons100way_vertebrate_rankscore (float)
+                        phastCons100way_vertebrate scores were ranked among all
+                        phastCons100way_vertebrate scores in dbNSFP. The
+                        rankscore is the ratio of the rank of the score over the
+                        total number of phastCons100way_vertebrate scores in
+                        dbNSFP.
+dbNSFP.SiPhy_29way_pi (char)
+                        The estimated stationary distribution of A, C, G and T
+                        at the site, using SiPhy algorithm based on 29 mammals
+                        genomes.
+dbNSFP.SiPhy_29way_logOdds (float)
+                        SiPhy score based on 29 mammals genomes. The larger the
+                        score, the more conserved the site.
+dbNSFP.SiPhy_29way_logOdds_rankscore (float)
+                        SiPhy_29way_logOdds scores were ranked among all
+                        SiPhy_29way_logOdds scores in dbNSFP. The rankscore is
+                        the ratio of the rank of the score over the total number
+                        of SiPhy_29way_logOdds scores in dbNSFP.
+dbNSFP.LRT_Omega (float)
+                        estimated nonsynonymous-to-synonymous-rate ratio
+                        (reported by LRT)
+dbNSFP.UniSNP_ids (char)
+                        "rs numbers from UniSNP, which is a cleaned version of
+                        dbSNP build 129, in format: rs number1;rs number2;..."
+dbNSFP.KGp1_AC (int)    Alternative allele count in the whole 1000Gp1 data.
+dbNSFP.KGp1_AF (float)  Alternative allele frequency in the whole 1000Gp1 data.
+dbNSFP.KGp1_AFR_AC (int)
+                        Alternative allele counts in the 1000Gp1 African
+                        descendent samples.
+dbNSFP.KGp1_AFR_AF (float)
+                        Alternative allele frequency in the 1000Gp1 African
+                        descendent samples.
+dbNSFP.KGp1_EUR_AC (int)
+                        Alternative allele counts in the 1000Gp1 European
+                        descendent samples.
+dbNSFP.KGp1_EUR_AF (float)
+                        Alternative allele frequency in the 1000Gp1 European
+                        descendent samples.
+dbNSFP.KGp1_AMR_AC (int)
+                        Alternative allele counts in the 1000Gp1 American
+                        descendent samples.
+dbNSFP.KGp1_AMR_AF (float)
+                        Alternative allele frequency in the 1000Gp1 American
+                        descendent samples.
+dbNSFP.KGp1_ASN_AC (int)
+                        Alternative allele counts in the 1000Gp1 Asian
+                        descendent samples.
+dbNSFP.KGp1_ASN_AF (float)
+                        Alternative allele frequency in the 1000Gp1 Asian
+                        descendent samples.
+dbNSFP.ESP6500_AA_AF (float)
+                        Alternative allele frequency in the Afrian American
+                        samples of the NHLBI GO Exome Sequencing Project
+                        (ESP6500 data set).
+dbNSFP.ESP6500_EA_AF (float)
+                        Alternative allele frequency in the European American
+                        samples of the NHLBI GO Exome Sequencing Project
+                        (ESP6500 data set).
+refGene.name (char)     Gene name
+refGene.chr (char)
+refGene.strand (char)   which DNA strand contains the observed alleles
+refGene.txStart (int)   Transcription start position (1-based)
+refGene.txEnd (int)     Transcription end position
+refGene.cdsStart (int)  Coding region start (1-based)
+refGene.cdsEnd (int)    Coding region end
+refGene.exonCount (int) Number of exons
+refGene.exonStarts (char)
+                        Starting point of exons (adjusted to 1-based positions)
+refGene.exonEnds (char) Ending point of exons
+refGene.score (int)     Score
+refGene.name2 (char)    Alternative name
+refGene.cdsStartStat (char)
+                        cds start stat, can be 'non', 'unk', 'incompl', and
+                        'cmp1'
+refGene.cdsEndStat (char)
+                        cds end stat, can be 'non', 'unk', 'incompl', and 'cmp1'
