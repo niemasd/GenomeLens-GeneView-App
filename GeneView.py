@@ -29,5 +29,4 @@ if __name__ == "__main__":
         for mutation in genesAndMutations[gene]:
             edit = mutation.replace("\xe2\x80\x8f","")
             command.append(edit)
-        print command
-        #call(command)
+        call(command)
