@@ -26,5 +26,8 @@ if __name__ == "__main__":
         command = ["./lollipops","-labels"]
         command.append("-o=images/"+gene+".svg")
         command.append(gene)
-        command.append(genesAndMutations[gene])
-        call(command)
+        for mutation in genesAndMutations[gene]:
+            edit = mutation.replace("\xe2\x80\x8f","")
+            command.append(edit)
+        print command
+        #call(command)
