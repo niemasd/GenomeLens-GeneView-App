@@ -12,6 +12,7 @@ def parseMutationList( file ):
     return out
 
 import sys
+import os
 from subprocess import call
 if __name__ == "__main__":
     if len(sys.argv) != 2:
