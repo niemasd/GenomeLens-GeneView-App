@@ -21,7 +21,13 @@ def generateLollipop( gene ):
     call(command)
 
 def generateHTML( gene ):
-    print "DO THIS!"
+    html = open("pages/"+gene+".html",'w')
+    html.write("<html>")
+    html.write("  <center>")
+    html.write("    <h>"+gene+"</h><br>")
+    html.write('    <img src="../images/'+gene+'.svg">')
+    html.write("  </center>")
+    html.write("</html>")
 
 import sys
 import os
@@ -39,3 +45,4 @@ if __name__ == "__main__":
     for gene in genesAndMutations: # generate a lollipop image and HTML page for each gene
         generateLollipop(gene)
         generateHTML(gene)
+    #generate index
