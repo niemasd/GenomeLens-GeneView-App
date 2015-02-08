@@ -22,12 +22,20 @@ def generateLollipop( gene ):
 
 def generateHTML( gene ):
     html = open("pages/"+gene+".html",'w')
-    html.write("<html>")
-    html.write("  <center>")
-    html.write("    <h>"+gene+"</h><br>")
-    html.write('    <img src="../images/'+gene+'.svg">')
-    html.write("  </center>")
-    html.write("</html>")
+    html.write('<html>')
+    html.write('  <head>')
+    html.write('    <title>' + gene + '</title>')
+    html.write('    <link rel="stylesheet" type="text/css" href="GeneView_style.css">')
+    html.write('  </head>')
+    html.write('  <body>')
+    html.write('    <h1>' + gene + '</h1><br><br>')
+    html.write('    <img class="lollipop" src="' + gene + '.svg" alt="lollipop gene view of ' + gene + '"><br><br>')
+    html.write('    <h2>Other Information</h2>')
+    html.write('    <p>')
+    html.write('      <a href="http://google.com">Dummy Link</a>')
+    html.write('    </p>')
+    html.write('  </body>')
+    html.write('</html>')
 
 import sys
 import os
