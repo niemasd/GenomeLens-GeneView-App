@@ -13,7 +13,7 @@ def parseMutationList( file ):
 
 def generateLollipop( gene, genes ):
     command = ["./lollipops","-labels"]
-    command.append("-o="+outFolder"/images/"+gene+".svg")
+    command.append("-o="+outFolder+"/images/"+gene+".svg")
     command.append(gene)
     for mutation in genes[gene]:
         edit = mutation.replace("\xe2\x80\x8f","")
