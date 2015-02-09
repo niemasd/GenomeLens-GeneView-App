@@ -43,16 +43,18 @@ def generateHTML( gene ):
 def generateIndexHTML( genes ):
     html = open(outFolder + "/index.html",'w')
     html.write('<html>\n')
-    html.write('  <head>\n')
-    html.write('    <title>GeneView</title>\n')
-    html.write('    <link rel="stylesheet" type="text/css" href="GeneView_style.css">\n')
-    html.write('  </head>\n')
-    html.write('  <body>\n')
-    html.write('    <h1>GeneView</h1><br>\n')
-    html.write('    <u>List of Genes:</u><br>\n')
-    for gene in sorted(genes.items()):
-        html.write('    <a href="pages/'+gene+'.html">'+gene+'</a><br>\n')
-    html.write('  </body>\n')
+    html.write('  <center>\n')
+    html.write('    <head>\n')
+    html.write('      <title>GeneView</title>\n')
+    html.write('      <link rel="stylesheet" type="text/css" href="GeneView_style.css">\n')
+    html.write('    </head>\n')
+    html.write('    <body>\n')
+    html.write('      <h1>GeneView</h1><br>\n')
+    html.write('      <u>List of Genes:</u><br>\n')
+    for gene in sorted(genes.keys()):
+        html.write('      <a href="pages/'+gene+'.html">'+gene+'</a><br>\n')
+    html.write('    </body>\n')
+    html.write('  </center>\n')
     html.write('</html>')
 
 import sys
