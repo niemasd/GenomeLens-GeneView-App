@@ -25,7 +25,7 @@ def generateHTML( gene ):
     html.write('<html>')
     html.write('  <head>')
     html.write('    <title>' + gene + '</title>')
-    html.write('    <link rel="stylesheet" type="text/css" href="GeneView_style.css">')
+    html.write('    <link rel="stylesheet" type="text/css" href="../GeneView_style.css">')
     html.write('  </head>')
     html.write('  <body>')
     html.write('    <h1>' + gene + '</h1><br><br>')
