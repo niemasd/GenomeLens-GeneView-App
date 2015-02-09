@@ -57,6 +57,8 @@ def generateIndexHTML( genes ):
 
 import sys
 import os
+import glob
+import shutil
 from subprocess import call
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -73,7 +75,8 @@ if __name__ == "__main__":
         os.makedirs(outFolder + "/images")
     if not os.path.exists(outFolder + "/pages"): # create pages folder if it doesn't exist
         os.makedirs(outFolder + "/pages")
-    call(["cp","*.css",outFolder])
+    for css in glob.glob("*.css") # copy all CSS files to output folder
+        shutil.copy(css,outFolder)
     for gene in genesAndMutations: # generate a lollipop image and HTML page for each gene
         generateLollipop(gene,genesAndMutations)
         generateHTML(gene)
