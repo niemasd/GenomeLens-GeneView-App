@@ -29,7 +29,7 @@ def generateHTML( gene ):
     html.write('  </head>')
     html.write('  <body>')
     html.write('    <h1>' + gene + '</h1><br><br>')
-    html.write('    <img class="lollipop" src="' + gene + '.svg" alt="lollipop gene view of ' + gene + '"><br><br>')
+    html.write('    <img class="lollipop" src="../images/' + gene + '.svg" alt="lollipop gene view of ' + gene + '"><br><br>')
     html.write('    <h2>Other Information</h2>')
     html.write('    <p>')
     html.write('      <a href="http://google.com">Dummy Link</a>')
