@@ -1,14 +1,32 @@
 # parse text file (contains gene name + mutation)
+colorSVT = "#2bc8d4"
+colorNonSVT = "#56e63d"
+
 def parseMutationList( file ):
     out = {}
     for line in file:
         parts = line.strip().split()
         geneID = parts[0]
         mutation = parts[1]
-        if geneID in out:
-            out[geneID].append(mutation)
+        mafs = parts[2]
+        svt = parts[3]
+        
+        #EXAMPLE: R248Q#7f3333@131
+        entry = mutation
+        if svt == 'Y':
+            entry += colorSVT
         else:
-            out[geneID] = [mutation]
+            entry += colorNonSVT
+        if mafs != "NA":
+            m = mafs.split('/')
+            sum = m[0] + m[1] + m[2] #not sure how to use MAF entry, ?/?/?
+            entry += '@'
+            entry += int(float(sum)*100)
+        
+        if geneID in out:
+            out[geneID].append(entry)
+        else:
+            out[geneID] = [entry]
     return out
 
 def generateLollipop( gene, genes ):
