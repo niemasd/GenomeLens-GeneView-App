@@ -21,7 +21,7 @@ def parseMutationList( file ):
             m = mafs.split('/')
             sum = float(m[0]) + float(m[1]) + float(m[2]) #not sure how to use MAF entry, ?/?/?
             entry += '@'
-            entry += int(sum*100)
+            entry += str(int(sum*100))
         
         if geneID in out:
             out[geneID].append(entry)
