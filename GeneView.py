@@ -19,9 +19,9 @@ def parseMutationList( file ):
             entry += colorNonSVT
         if mafs != "NA":
             m = mafs.split('/')
-            sum = m[0] + m[1] + m[2] #not sure how to use MAF entry, ?/?/?
+            sum = float(m[0]) + float(m[1]) + float(m[2]) #not sure how to use MAF entry, ?/?/?
             entry += '@'
-            entry += int(float(sum)*100)
+            entry += int(sum*100)
         
         if geneID in out:
             out[geneID].append(entry)
