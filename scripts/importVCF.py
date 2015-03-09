@@ -1,5 +1,4 @@
 # TODO read in excel for patient
-# TODO vcf-merge all esp files
 # TODO implement ExAC formatting
 # TODO for efficiency, consider writing all ref genes as python objs (use cPickle lib), then read as needed for patient. or, read in pat first, then only create the objs as needed. or, pre generate all ref genes with all ref data as lollipop svgs, then just deal with editing svgs on the fly
 
@@ -122,6 +121,7 @@ def importPatientVCF(fileName, geneDict):
 
 # sample usage:
 # python importVCF.py ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chr22.snps_indels.vcf ESP ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf | less
+# python importVCF.py ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP ../svt_gatk_candidate_mut/candidates_CH_SVT_Final_v2.vcf
 if __name__ == "__main__":
     if len(sys.argv) != 4 :
         print "ERROR: Incorrect number of arguments. Correct usage:"
@@ -132,4 +132,6 @@ if __name__ == "__main__":
     importPatientVCF(sys.argv[3], geneDict) # updates existing dict
     # print
     for key in geneDict:
-        print geneDict[key]
+        # only print the genes that the patient has
+        if (geneDict[key]).anyInPat():
+            print geneDict[key]

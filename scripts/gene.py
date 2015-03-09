@@ -24,6 +24,7 @@ class Gene:
             maf = "NA"
             if self.mafs[aa] is not None:
                 maf = "/".join(self.mafs[aa])
+
             retVal += "{} {} {} {}\n".format(self.name,
                                              aa,
                                              maf,
@@ -48,4 +49,8 @@ class Gene:
             self.AAChanges.append(aaChange)
             self.mafs[aaChange] = maf
             self.inPat[aaChange] = inPat
+
+    # return if this patient has a mutation in this gene at all
+    def anyInPat(self):
+        return any(self.inPat.values())
 

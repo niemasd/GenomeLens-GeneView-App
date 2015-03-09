@@ -13,7 +13,7 @@
 #        changes). OPTIONAL. (more options TODO)
 
 # sample usage:
-#   ./concatESP.sh ./esp_dl ./esp_dl/all_chr_snps_indels.txt p
+#   ./concatESPtxt.sh ./esp_dl ./esp_dl/all_chr_snps_indels.txt p
 
 ###################################################################
 ## Change this to modify expected file name
