@@ -83,6 +83,8 @@ from subprocess import call
 from importVCF import importVCF
 
 
+# sample usage:
+#   python GeneView.py ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print "ERROR: Incorrect number of arguments. Correct usage:"
@@ -101,7 +103,7 @@ if __name__ == "__main__":
         os.makedirs(outFolder + "/pages")
     for css in glob.glob("*.css"): # copy all CSS files to output folder
         shutil.copy(css,outFolder)
-    for gene in genesAndMutations: # generate a lollipop image and HTML page for each gene
-        #generateLollipop(gene,genesAndMutations)
-        generateHTML(gene)
+    #for gene in genesAndMutations: # generate a lollipop image and HTML page for each gene
+    #    #generateLollipop(gene,genesAndMutations) # add in to generate lollipops
+    #    generateHTML(gene)
     generateIndexHTML(genesAndMutations) # generate index.html

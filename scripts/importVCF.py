@@ -128,7 +128,7 @@ def importVCF(refFile, refType, patFile):
     for key in geneDict:
         # only print the genes that the patient has
         if (geneDict[key]).anyInPat():
-            ret.append(geneDict[key])
+            ret.append(str(geneDict[key]))
     return ret
             
 # sample usage:
