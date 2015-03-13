@@ -29,7 +29,7 @@ class Gene:
                                              aa,
                                              maf,
                                              self.inPat[aa])
-        retVal = retVal.rstrip() # remove trailing newline
+        #retVal = retVal.rstrip() # remove trailing newline
         return retVal
 
     # update or add AA, MAF, inPat

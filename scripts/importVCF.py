@@ -119,6 +119,18 @@ def importPatientVCF(fileName, geneDict):
                 geneDict[geneAAtup[0]] = Gene(geneAAtup[0], geneAAtup[1], None, True)
  
 
+def importVCF(refFile, refType, patFile):
+    geneDict = importContextVCF(refFile, refType)
+    importPatientVCF(patFile, geneDict) # updates existing dict
+
+    # concat results
+    ret = []
+    for key in geneDict:
+        # only print the genes that the patient has
+        if (geneDict[key]).anyInPat():
+            ret.append(geneDict[key])
+    return ret
+            
 # sample usage:
 # python importVCF.py ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chr22.snps_indels.vcf ESP ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf | less
 # python importVCF.py ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP ../svt_gatk_candidate_mut/candidates_CH_SVT_Final_v2.vcf

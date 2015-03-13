@@ -13,7 +13,7 @@ def parseMutationList( file ):
         
         #EXAMPLE: R248Q#7f3333@131
         entry = mutation
-        if svt == 'Y':
+        if svt == 'True':
             entry += colorSVT
         else:
             entry += colorNonSVT
@@ -80,13 +80,17 @@ import os
 import glob
 import shutil
 from subprocess import call
+from importVCF import importVCF
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 4:
         print "ERROR: Incorrect number of arguments. Correct usage:"
-        print "GeneView.py <vcf_file>"
+        print "GeneView.py <pat_vcf_file> <ref_vcf_file> <ref_type [ESP]>"
         sys.exit()
     outFolder = "output"
-    genesAndMutations = parseMutationList(open(sys.argv[1],'r')) # parse VCF and return dict, where dict[geneName] = [list of mutationName@freq]
+    #genesAndMutations = parseMutationList(open(sys.argv[1],'r')) # parse VCF and return dict, where dict[geneName] = [list of mutationName@freq]
+    genesAndMutations = parseMutationList(importVCF(sys.argv[2], sys.argv[3], sys.argv[1]))
     if not os.path.exists(outFolder):
         os.makedirs(outFolder)
         os.makedirs(outFolder + "/images")
@@ -98,6 +102,6 @@ if __name__ == "__main__":
     for css in glob.glob("*.css"): # copy all CSS files to output folder
         shutil.copy(css,outFolder)
     for gene in genesAndMutations: # generate a lollipop image and HTML page for each gene
-        generateLollipop(gene,genesAndMutations)
+        #generateLollipop(gene,genesAndMutations)
         generateHTML(gene)
     generateIndexHTML(genesAndMutations) # generate index.html
