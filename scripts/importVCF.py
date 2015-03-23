@@ -1,6 +1,8 @@
 # TODO read in excel for patient
 # TODO implement ExAC formatting
 # TODO for efficiency, consider writing all ref genes as python objs (use cPickle lib), then read as needed for patient. or, read in pat first, then only create the objs as needed. or, pre generate all ref genes with all ref data as lollipop svgs, then just deal with editing svgs on the fly
+# TODO fix MAF output formatting
+# TODO fix flow of data from reading in vcf files to creating lollipop plots. Right now, reading in vcf files creates a giant string of information, then creating lollipop plots parses that string. This may be better with just passing a dictionary of Gene objs. However, it also depends on how the patient specific data is being stored internally (vcf? sqlite db?)
 
 import vcf
 import re # regex
