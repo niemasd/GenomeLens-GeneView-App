@@ -126,11 +126,12 @@ def importVCF(refFile, refType, patFile):
     importPatientVCF(patFile, geneDict) # updates existing dict
 
     # concat results
-    ret = []
+    ret = {}
     for key in geneDict:
-        # only print the genes that the patient has
+        # only keep the genes that the patient has
         if (geneDict[key]).anyInPat():
-            ret.append(str(geneDict[key]))
+            #ret.append(str(geneDict[key]))
+            ret[key] = geneDict[key]
     return ret
             
 # sample usage:
