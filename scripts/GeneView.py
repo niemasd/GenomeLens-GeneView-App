@@ -1,6 +1,6 @@
 # parse text file (contains gene name + mutation)
-colorPat = "2bc8d4"
-colorNonPat = "56e63d"
+colorPat = "ff0000" # red
+colorNonPat = "00ccff" # light blue
 
 def parseMutationList( geneDict ):
     out = {}
@@ -99,6 +99,7 @@ from importVCF import importVCF
 
 # sample usage:
 #   python GeneView.py ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP exampleOut
+#   python GeneView.py ../svt_gatk_candidate_mut/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP ../exampleOut
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print "ERROR: Incorrect number of arguments. Correct usage:"
