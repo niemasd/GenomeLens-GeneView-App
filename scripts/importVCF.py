@@ -92,16 +92,22 @@ def importPatientVCF(fileName, geneDict):
     headerTok = headerStr.split("|") # just the stuff in the (), split by |
     aaIdx = -1
     geneNameIdx = -1
+    ensemblIdx = -1
     for tok in headerTok:
         if "Amino_Acid_Change" in tok:
             aaIdx = headerTok.index(tok)
         elif "Gene_Name" in tok:
             geneNameIdx = headerTok.index(tok)
+        elif "Transcript_ID" in tok:
+            ensemblIdx = headerTok.index(tok)
     if aaIdx == -1:
         print "ERROR: Couldn't find Amino_Acid_Change in EFF header"
         return -1
     if geneNameIdx == -1:
         print "ERROR: Couldn't find Gene_Name in EFF header"
+        return -1
+    if ensemblIdx == -1:
+        print "ERROR: Couldn't find Transcript_ID in EFF header"
         return -1
     
     # iterate over lines in vcf file
