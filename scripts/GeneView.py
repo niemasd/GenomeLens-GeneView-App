@@ -31,8 +31,10 @@ def parseMutationList( geneDict ):
 
 def generateLollipop( gene ):
     command = ["./lollipops","-labels"]
-    command.append("-o="+outFolder+"/"+gene.name+".svg")
-    command.append(gene.name)
+    #command.append("-o="+outFolder+"/"+gene.name+".svg")
+    #command.append(gene.name)
+    command.append("-o="+outFolder+"/"+gene.uniprotID+".svg")
+    command.append("-U="+gene.uniprotID)
     for mutation in gene.AAChanges:
         # aaChange#color@size
         # if in patient
@@ -49,8 +51,8 @@ def generateLollipop( gene ):
             arg += "@" + str(size)
         #edit = mutation.replace("\xe2\x80\x8f","")
         command.append(arg)
-    call(command)
-    #print(command)
+    #call(command)
+    print(command)
 
 def generateHTML( gene ):
     html = open(outFolder + "/pages/"+gene+".html",'w')
@@ -109,23 +111,27 @@ import glob
 import shutil
 from subprocess import call
 from importVCF import importVCF
+#from ReadTable import readTable
+from ParseDAT import parseDAT
 
 
 # sample usage:
-#   python GeneView.py ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP exampleOut
+#   python GeneView.py ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP exampleOut ../inputs/UNIPROT_REFSEQ_ENSEMBLE.tab
 #   python GeneView.py ../svt_gatk_candidate_mut/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP ../exampleOut
 if __name__ == "__main__":
     if len(sys.argv) != 6:
         print "ERROR: Incorrect number of arguments. Correct usage:"
-        print "GeneView.py <pat_vcf_file> <ref_vcf_file> <ref_type [ESP]> <username_aka_output> <uniprot_ensemblID_table>"
+        print "GeneView.py <pat_vcf_file> <ref_vcf_file> <ref_type [ESP]> <username_aka_output> <uniprot_refseq_ensemblID_table>"
         sys.exit()
     outFolder = sys.argv[4]
     #genesAndMutations = parseMutationList(open(sys.argv[1],'r')) # parse VCF and return dict, where dict[geneName] = [list of mutationName@freq]
     #genesAndMutations = parseMutationList(importVCF(sys.argv[2], sys.argv[3], sys.argv[1]))
     #uniprotDict = readTable(open('db/UNIPROT_REFSEQ_ENSEMBLE.tab'))
-    uniprotDict = readTable(open(sys.argv[5]))
+    #global uniprotDict
+    #uniprotDict = readTable(open(sys.argv[5]))
+    uniprotDict = parseDAT(open(sys.argv[5]))
     #uniprotDict = readUniprotEnsemblTable(sys.argv[5])
-    genes = importVCF(sys.argv[2], sys.argv[3], sys.argv[1])
+    genes = importVCF(sys.argv[2], sys.argv[3], sys.argv[1], uniprotDict)
     if not os.path.exists(outFolder):
         os.makedirs(outFolder)
         #os.makedirs(outFolder + "/images")

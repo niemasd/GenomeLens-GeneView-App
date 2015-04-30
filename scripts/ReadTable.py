@@ -43,5 +43,5 @@ def readTable(f):
             dic[refseq] = parts[0]
     return dic
 
-d = readTable(open('db/UNIPROT_REFSEQ_ENSEMBLE.tab'))
-print len(d)
+#d = readTable(open('db/UNIPROT_REFSEQ_ENSEMBLE.tab'))
+#print len(d)

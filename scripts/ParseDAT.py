@@ -8,27 +8,31 @@
 def parseDAT(f):
     genes = {} # genes[gene] = [RefSeq,Ensembl_TRS,UniProtKB-AC]
     for line in f:
-        if 'RefSeq\t' in line:
+        if 'RefSeq' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
-                genes[parts[0]] = ['','','']
-            genes[parts[0]][0] = parts[2]
+                genes[parts[0]] = [[],[],'']
+            genes[parts[0]][0].append(parts[2])
         elif 'Ensembl_TRS\t' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
-                genes[parts[0]] = ['','','']
-            genes[parts[0]][1] = parts[2]
+                genes[parts[0]] = [[],[],'']
+            genes[parts[0]][1].append(parts[2])
         elif 'UniProtKB-AC\t' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
-                genes[parts[0]] = ['','','']
+                genes[parts[0]] = [[],[],'']
             genes[parts[0]][2] = parts[2]
     dic = {}
     for gene in genes:
-        parts = genes[gene]
-        dic[parts[1]] = parts[2]
-        dic[parts[0]] = parts[2]
+        refseq,ensembl,uniprot = genes[gene]
+        for r in refseq:
+            dic[r] = uniprot
+        for e in ensembl:
+            dic[e] = uniprot
+        #dic[parts[1]] = parts[2]
+        #dic[parts[0]] = parts[2]
     return dic
 
-d = parseDAT(open('db/HUMAN_9606_idmapping.dat'))
-print len(d)
+#d = parseDAT(open('db/HUMAN_9606_idmapping.dat'))
+#print len(d)

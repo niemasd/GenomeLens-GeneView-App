@@ -11,7 +11,7 @@ import re # regex
 import sys
 from gene import Gene
 
-def importContextVCF(fileName, contextSrc):
+def importContextVCF(fileName, contextSrc, uniprotDict):
     #vcf_reader = vcf.Reader(open('esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chr22.snps_indels.vcf', 'r'))
     vcf_reader = vcf.Reader(open(fileName, 'r'))
     
@@ -69,7 +69,7 @@ def importContextVCF(fileName, contextSrc):
                         else:
                             # add new gene to dict, default inPat to False
                             #geneDict[currGene] = Gene(currGene, "", refSeq, uniprotID, currAA, maf, False)
-                            geneDict[uniprotID] = Gene(currGene, "", refSeq, uniprotID, currAA, maf, False)
+                            geneDict[uniprotID] = Gene(ene, "", refSeq, uniprotID, currAA, maf, False)
     
             #currGeneSet = record.INFO[infoGeneName] # gene names
             #maf = record.INFO[infoMAF] # minor allele freqs
@@ -104,7 +104,7 @@ def parseEff(effEntry, geneNameIdx, aaIdx, ensemblIdx):
 # read in the patient VCF file. Parse the EFF entry for gene name and amino
 # acid change.
 # Edits the passed geneDict (add or update)
-def importPatientVCF(fileName, geneDict):
+def importPatientVCF(fileName, geneDict, uniprotDict):
     vcf_reader = vcf.Reader(open(fileName, 'r'))
 
     # find index of AA change based on SnpEff header
@@ -157,9 +157,9 @@ def importPatientVCF(fileName, geneDict):
                 geneDict[uniprotID] = Gene(geneAAlist[0], geneAAlist[2], "", uniprotID, geneAAlist[1], None, True)
  
 
-def importVCF(refFile, refType, patFile):
-    geneDict = importContextVCF(refFile, refType)
-    importPatientVCF(patFile, geneDict) # updates existing dict
+def importVCF(refFile, refType, patFile, uniprotDict):
+    geneDict = importContextVCF(refFile, refType, uniprotDict)
+    importPatientVCF(patFile, geneDict, uniprotDict) # updates existing dict
 
     # concat results
     ret = {}
