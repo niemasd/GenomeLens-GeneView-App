@@ -89,6 +89,20 @@ def generateIndexHTML( genes ):
     html.write('  </center>\n')
     html.write('</html>')
 
+## Pass in a "file" object, not a filename string
+## i.e. readUniprotEnsemblTable(open('table.txt'))
+## The returned dictionary has the following structure:
+##   KEYS:   ENSEMBL ID
+##   VALUES: Tuple of (Uniprot ID, Gene Name)
+#def readUniprotEnsemblTable(f):
+#    dic = {}
+#    for line in f:
+#        if line[0] != '#':
+#            parts = line.strip().split()
+#            dic[parts[0]] = (parts[1],parts[2])
+#    return dic
+
+
 import sys
 import os
 import glob
@@ -101,13 +115,16 @@ from importVCF import importVCF
 #   python GeneView.py ../../../Dropbox/GenomeLens/SVT/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP exampleOut
 #   python GeneView.py ../svt_gatk_candidate_mut/candidates_CH_SVT_Final_v2.vcf ../esp_dl/ESP6500SI-V2-SSA137.GRCh38-liftover.chrAll.snps_indels.vcf ESP ../exampleOut
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 6:
         print "ERROR: Incorrect number of arguments. Correct usage:"
-        print "GeneView.py <pat_vcf_file> <ref_vcf_file> <ref_type [ESP]> <username_aka_output>"
+        print "GeneView.py <pat_vcf_file> <ref_vcf_file> <ref_type [ESP]> <username_aka_output> <uniprot_ensemblID_table>"
         sys.exit()
     outFolder = sys.argv[4]
     #genesAndMutations = parseMutationList(open(sys.argv[1],'r')) # parse VCF and return dict, where dict[geneName] = [list of mutationName@freq]
     #genesAndMutations = parseMutationList(importVCF(sys.argv[2], sys.argv[3], sys.argv[1]))
+    #uniprotDict = readTable(open('db/UNIPROT_REFSEQ_ENSEMBLE.tab'))
+    uniprotDict = readTable(open(sys.argv[5]))
+    #uniprotDict = readUniprotEnsemblTable(sys.argv[5])
     genes = importVCF(sys.argv[2], sys.argv[3], sys.argv[1])
     if not os.path.exists(outFolder):
         os.makedirs(outFolder)

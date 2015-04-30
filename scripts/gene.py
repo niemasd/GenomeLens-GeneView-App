@@ -1,8 +1,18 @@
 
 class Gene:
     # ctor
-    def __init__(self, name, aaChange, mafs, inPat):
+    def __init__(self, name, ensembl, refSeq, uniprot, aaChange, mafs, inPat):
+        # gene name, as given by snpeff
         self.name = name
+
+        # ensembl transcript ID, as given by snpeff
+        self.ensemblID = ensembl
+
+        # refseq ID, as given by ESP6500
+        self.refSeq = refSeq
+
+        # uniprot ID, as translated from snpeff
+        self.uniprotID = uniprot
 
         # list of amino acid changes
         self.AAChanges = [aaChange]
@@ -25,7 +35,9 @@ class Gene:
             if self.mafs[aa] is not None:
                 maf = "/".join(self.mafs[aa])
 
-            retVal += "{} {} {} {}\n".format(self.name,
+            retVal += "{} {} {} {} {} {}\n".format(self.name,
+                                             ensemblID,
+                                             uniprotID,
                                              aa,
                                              maf,
                                              self.inPat[aa])

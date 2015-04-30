@@ -1,3 +1,5 @@
+# TODO update importContextVCF to store ensembl/Uniprot IDs as keys instead of gene names
+# TODO update lollipops call
 # TODO read in excel for patient
 # TODO implement ExAC formatting
 # TODO for efficiency, consider writing all ref genes as python objs (use cPickle lib), then read as needed for patient. or, read in pat first, then only create the objs as needed. or, pre generate all ref genes with all ref data as lollipop svgs, then just deal with editing svgs on the fly
@@ -39,45 +41,65 @@ def importContextVCF(fileName, contextSrc):
             for entry in prot:
                 if isESP:
                     if ")" in entry: # parsing issue. Silent mutations rep by "=", which is parsed incorrectly. In this case, there's no ending ")", so skip (ie don't add)
-                        # entry ex: NM_014339.5:p.(N292S)
-                        #pDot = entry.partition(":")[2] # result ex p.(N292S)
-                        #endParen = pDot.partition("(")[2] # result ex N292S)
-                        #trimmed = endParen.partition(")")[0] # result ex N292S
+                        ## entry ex: NM_014339.5:p.(N292S)
+                        ##pDot = entry.partition(":")[2] # result ex p.(N292S)
+                        ##endParen = pDot.partition("(")[2] # result ex N292S)
+                        ##trimmed = endParen.partition(")")[0] # result ex N292S
     
-                        # entry ex: NM_014339.5:p.(N292S)
-                        #tr = aaRegexSt.sub("", entry) # result ex p.(N292S)
-                        #trimmed = aaRegexEnd.sub("", tr) # result ex N292S)
-                        #aaChange.append(trimmed)
-                        aaChange.append(aaRegexEnd.sub("", aaRegexSt.sub("", entry))) # one liner
+                        ## entry ex: NM_014339.5:p.(N292S)
+                        ##tr = aaRegexSt.sub("", entry) # result ex p.(N292S)
+                        ##trimmed = aaRegexEnd.sub("", tr) # result ex N292S)
+                        ##aaChange.append(trimmed)
+                        #aaChange.append(aaRegexEnd.sub("", aaRegexSt.sub("", entry))) # one liner
+                        # split around ":".
+                        # First part is RefSeq ID, second part is amino acid change
+                        sp = entry.split(":")
+                        refSeq = sp[0]
+                        aa = sp[1]
+
+                        # translate from refSeq to uniprot
+                        uniprotID = uniprotDict[refSeq]
+                        
+                        # store
+                        #if currGene in geneDict:
+                        if uniprotID in geneDict:
+                            # add this aa to this gene's records, default inPat=F
+                            #geneDict[currGene].addAAmaf(currAA, maf, False)
+                            geneDict[uniprotID].addAAmaf(currAA, maf, False)
+                        else:
+                            # add new gene to dict, default inPat to False
+                            #geneDict[currGene] = Gene(currGene, "", refSeq, uniprotID, currAA, maf, False)
+                            geneDict[uniprotID] = Gene(currGene, "", refSeq, uniprotID, currAA, maf, False)
     
-            currGeneSet = record.INFO[infoGeneName] # gene names
-            maf = record.INFO[infoMAF] # minor allele freqs
-            
-            # store this entry
-            for currGene in currGeneSet:
-                for currAA in aaChange:
-                    if currGene in geneDict:
-                        # add this aa to this gene's records, default inPat=F
-                        geneDict[currGene].addAAmaf(currAA, maf, False)
-                    else:
-                        # add new gene to dict, default inPat to False
-                        geneDict[currGene] = Gene(currGene, currAA, maf, False)
+            #currGeneSet = record.INFO[infoGeneName] # gene names
+            #maf = record.INFO[infoMAF] # minor allele freqs
+            #
+            ## store this entry
+            #for currGene in currGeneSet:
+            #    for currAA in aaChange:
+            #        if currGene in geneDict:
+            #            # add this aa to this gene's records, default inPat=F
+            #            geneDict[currGene].addAAmaf(currAA, maf, False)
+            #        else:
+            #            # add new gene to dict, default inPat to False
+            #            geneDict[currGene] = Gene(currGene, currAA, maf, False)
     
     return geneDict
 
-# extract gene name and amino acid change.
-# Return as a tuple (gene name, aa change)
+# extract gene name and amino acid change and ensembl ID.
+# Return as a list [gene name, aa change, ensmblID]
 # ex: 'NON_SYNONYMOUS_CODING(MODERATE|MISSENSE|gCc/gTc|A325V|347|MKNK1|protein_coding|CODING|ENST00000341183|11|1)'
 # ex: 'EXON(MODIFIER|||||MKNK1|retained_intron|CODING|ENST00000532897|5|1)'
-def parseEff(effEntry, geneNameIdx, aaIdx):
+def parseEff(effEntry, geneNameIdx, aaIdx, ensemblIdx):
     noEffect = (effEntry.partition("(")[2]).partition(")")[0].strip()
     effTok = noEffect.split("|")
     geneName = effTok[geneNameIdx]
     aaChange = effTok[aaIdx]
-    if geneName == "" or aaChange == "":
+    ensemblID = effTok[ensemblIdx]
+    if geneName == "" or aaChange == "" or ensemblID == "":
         return None
     else:
-        return (geneName, aaChange)
+        return [geneName, aaChange, ensemblID]
 
 # read in the patient VCF file. Parse the EFF entry for gene name and amino
 # acid change.
@@ -114,17 +136,25 @@ def importPatientVCF(fileName, geneDict):
     for record in vcf_reader:
         effEntries = record.INFO['EFF']
         for entry in effEntries:
-            geneAAtup = parseEff(entry, geneNameIdx, aaIdx)
+            # geneAAlist = [gene name, aa change, ensmblID]
+            geneAAlist = parseEff(entry, geneNameIdx, aaIdx, ensemblIdx)
 
             # no gene name or aa change in this entry. continue
-            if geneAAtup is None:
+            if geneAAlist is None:
                 continue
+            # get uniprotID
+            uniprotID = uniprotDict[geneAAlist[3]]
+
             # if have stored this gene in geneDict
-            if geneAAtup[0] in geneDict:
-                geneDict[geneAAtup[0]].addAAmaf(geneAAtup[1], None, True)
+            #if geneAAlist[0] in geneDict: # store by gene name
+            #if geneAAlist[2] in geneDict: # store by ensembl ID
+            if uniprotID in geneDict: # store by uniprot ID
+                #geneDict[geneAAlist[2]].addAAmaf(geneAAlist[1], None, True)
+                geneDict[uniprotID].addAAmaf(geneAAlist[1], None, True)
             # else, make a new Gene obj
             else:
-                geneDict[geneAAtup[0]] = Gene(geneAAtup[0], geneAAtup[1], None, True)
+                #geneDict[geneAAlist[2]] = Gene(geneAAlist[0], geneAAlist[2], uniprotID, geneAAlist[1], None, True)
+                geneDict[uniprotID] = Gene(geneAAlist[0], geneAAlist[2], "", uniprotID, geneAAlist[1], None, True)
  
 
 def importVCF(refFile, refType, patFile):
