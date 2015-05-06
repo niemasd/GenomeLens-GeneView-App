@@ -22,7 +22,7 @@ def parseDAT(f):
             parts = line.strip().split('\t')
             if parts[0] not in genes:
                 genes[parts[0]] = [[],[],'']
-            genes[parts[0]][2] = parts[2]
+            genes[parts[0]][2] = parts[0]
     dic = {}
     for gene in genes:
         refseq,ensembl,uniprot = genes[gene]
@@ -34,5 +34,11 @@ def parseDAT(f):
         #dic[parts[0]] = parts[2]
     return dic
 
-#d = parseDAT(open('db/HUMAN_9606_idmapping.dat'))
+d = parseDAT(open('../HUMAN_9606_idmapping.dat'))
+for k in d.keys():
+    print "KEY: " + k
+    #print "VALUE: " + d.get(k)
+    print "VALUE: " + d[k]
+    print
+#print d.keys()
 #print len(d)

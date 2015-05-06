@@ -51,8 +51,8 @@ def generateLollipop( gene ):
             arg += "@" + str(size)
         #edit = mutation.replace("\xe2\x80\x8f","")
         command.append(arg)
-    #call(command)
-    print(command)
+    print(" ".join(command))
+#    call(command)
 
 def generateHTML( gene ):
     html = open(outFolder + "/pages/"+gene+".html",'w')
@@ -144,6 +144,11 @@ if __name__ == "__main__":
         #shutil.copy(css,outFolder)
     #for gene in genesAndMutations: # generate a lollipop image and HTML page for each gene
     for gene in genes.keys():
+        # gene is a uniprotID. Make sure it actually is one, since
+        # some were added as dummy values
+        if uniprotDict.get(gene) is None:
+            #continue
+            print "NOT IN uniprotDic " + gene
         #generateLollipop(gene,genesAndMutations) # add in to generate lollipops
         generateLollipop(genes[gene]) # add in to generate lollipops
         #generateHTML(gene)

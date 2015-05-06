@@ -38,6 +38,8 @@ def importContextVCF(fileName, contextSrc, uniprotDict):
         if all(entry is not None for entry in prot):
             # reformat aaChange entry to be just <ref><pos><alt>
             aaChange = []
+            currGeneSet = record.INFO[infoGeneName] # gene names
+            maf = record.INFO[infoMAF] # minor allele freqs
             for entry in prot:
                 if isESP:
                     if ")" in entry: # parsing issue. Silent mutations rep by "=", which is parsed incorrectly. In this case, there's no ending ")", so skip (ie don't add)
@@ -51,25 +53,44 @@ def importContextVCF(fileName, contextSrc, uniprotDict):
                         ##trimmed = aaRegexEnd.sub("", tr) # result ex N292S)
                         ##aaChange.append(trimmed)
                         #aaChange.append(aaRegexEnd.sub("", aaRegexSt.sub("", entry))) # one liner
+
+                        ## entry ex: NM_014339.5:p.(N292S)
                         # split around ":".
                         # First part is RefSeq ID, second part is amino acid change
                         sp = entry.split(":")
                         refSeq = sp[0]
-                        aa = sp[1]
+                        pDot = sp[1] # result ex p.(N292S)
+                        endParen = pDot.partition("(")[2] # result ex N292S)
+                        aa = endParen.partition(")")[0] # result ex N292S
+                        #aa = sp[1]
 
                         # translate from refSeq to uniprot
-                        uniprotID = uniprotDict[refSeq]
+                        #uniprotID = uniprotDict[refSeq]
+                        uniprotID = uniprotDict.get(refSeq)
+                        if uniprotID is None:
+                            # FIXME try with refSeq or skip?
+                            uniprotID = refSeq
+                        else:
+                            print "NOT NONE " + uniprotID
                         
+                        #if uniprotID == "": # no uniprot or refseq
+                        if len(uniprotID) == 0: # no uniprot or refseq
+                            uniprotID = currGeneSet[0] # try with gene name or skip? FIXME
+                        else:
+                            print "NOT LEN == 0 " + uniprotID
+                            #print "CHANGED " + entry
+                        #print "\"" + uniprotID  + "\""
                         # store
                         #if currGene in geneDict:
+                        #maf = record.INFO[infoMAF] # minor allele freqs
                         if uniprotID in geneDict:
                             # add this aa to this gene's records, default inPat=F
                             #geneDict[currGene].addAAmaf(currAA, maf, False)
-                            geneDict[uniprotID].addAAmaf(currAA, maf, False)
+                            geneDict[uniprotID].addAAmaf(aa, maf, False)
                         else:
                             # add new gene to dict, default inPat to False
                             #geneDict[currGene] = Gene(currGene, "", refSeq, uniprotID, currAA, maf, False)
-                            geneDict[uniprotID] = Gene(ene, "", refSeq, uniprotID, currAA, maf, False)
+                            geneDict[uniprotID] = Gene(uniprotID, "", refSeq, uniprotID, aa, maf, False)
     
             #currGeneSet = record.INFO[infoGeneName] # gene names
             #maf = record.INFO[infoMAF] # minor allele freqs
@@ -142,26 +163,43 @@ def importPatientVCF(fileName, geneDict, uniprotDict):
             # no gene name or aa change in this entry. continue
             if geneAAlist is None:
                 continue
-            # get uniprotID
-            uniprotID = uniprotDict[geneAAlist[3]]
 
+            geneName = geneAAlist[0]
+            aa = geneAAlist[1]
+            ensemblID = geneAAlist[2]
+
+            # get uniprotID
+            #uniprotID = uniprotDict[geneAAlist[3]]
+            uniprotID = uniprotDict.get(ensemblID)
+
+            #print "UNCHANGED " + str(uniprotID)
+            if uniprotID is None:
+                # FIXME try with ensemblID? or skip?
+                uniprotID = ensemblID
+
+            if len(uniprotID) == 0:
+                uniprotID = geneName # try with gene name to match context vcf or skip? FIXME
+
+            #print "CHANGED " + uniprotID
             # if have stored this gene in geneDict
             #if geneAAlist[0] in geneDict: # store by gene name
             #if geneAAlist[2] in geneDict: # store by ensembl ID
             if uniprotID in geneDict: # store by uniprot ID
                 #geneDict[geneAAlist[2]].addAAmaf(geneAAlist[1], None, True)
-                geneDict[uniprotID].addAAmaf(geneAAlist[1], None, True)
+                geneDict[uniprotID].addAAmaf(aa, None, True)
             # else, make a new Gene obj
             else:
                 #geneDict[geneAAlist[2]] = Gene(geneAAlist[0], geneAAlist[2], uniprotID, geneAAlist[1], None, True)
-                geneDict[uniprotID] = Gene(geneAAlist[0], geneAAlist[2], "", uniprotID, geneAAlist[1], None, True)
+                #geneDict[uniprotID] = Gene(geneAAlist[0], geneAAlist[2], "", uniprotID, geneAAlist[1], None, True)
+                geneDict[uniprotID] = Gene(uniprotID, ensemblID, "", uniprotID, aa, None, True)
  
 
 def importVCF(refFile, refType, patFile, uniprotDict):
     geneDict = importContextVCF(refFile, refType, uniprotDict)
     importPatientVCF(patFile, geneDict, uniprotDict) # updates existing dict
+    #return geneDict
 
-    # concat results
+    # filter results
     ret = {}
     for key in geneDict:
         # only keep the genes that the patient has

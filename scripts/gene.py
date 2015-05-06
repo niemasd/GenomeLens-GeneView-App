@@ -2,7 +2,8 @@
 class Gene:
     # ctor
     def __init__(self, name, ensembl, refSeq, uniprot, aaChange, mafs, inPat):
-        # gene name, as given by snpeff
+        ## gene name, as given by snpeff
+        # gene name, as given by uniprotID. This is the key
         self.name = name
 
         # ensembl transcript ID, as given by snpeff
