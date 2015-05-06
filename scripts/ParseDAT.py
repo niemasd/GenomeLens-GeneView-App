@@ -22,7 +22,7 @@ def parseDAT(f):
             parts = line.strip().split('\t')
             if parts[0] not in genes:
                 genes[parts[0]] = [[],[],'']
-            genes[parts[0]][2] = parts[0]
+            genes[parts[0]][2] = parts[2]
     dic = {}
     for gene in genes:
         refseq,ensembl,uniprot = genes[gene]
