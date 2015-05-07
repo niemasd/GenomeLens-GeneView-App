@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="5733.106796" x2="5733.106796" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="V169A"><circle cx="5733.106796" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H0Y450_HUMAN, Probable arginine--tRNA ligase, mitochondrial (Fragment) (206aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2992.475728" y="47" width="67.669903" height="14"/></a>
+<g transform="translate(1030.048544,42)"><a xlink:href="http://pfam.xfam.org/family/PF13900" xlink:title="Putative binding domain"><rect fill="#2dcf00" x="0" y="0" width="1353.398058" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="676.699029" y="16">Putative binding domain</text></a></g>
+<g transform="translate(4379.708738,42)"><a xlink:href="http://pfam.xfam.org/family/PF00750" xlink:title="tRNA synthetases class I (R)"><rect fill="#ff5353" x="0" y="0" width="2605.291262" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="1302.645631" y="16">tRNA synthetases class I (R)</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="1030.048544" x2="1030.048544" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1030.048544" y="91">30</text><line x1="2383.446602" x2="2383.446602" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2383.446602" y="91">70</text><line x1="4379.708738" x2="4379.708738" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4379.708738" y="91">129</text><line x1="5733.106796" x2="5733.106796" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5733.106796" y="91">169</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">206</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">206</text></g>
+</svg>

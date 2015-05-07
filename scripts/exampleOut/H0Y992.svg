@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="2384.800000" x2="2384.800000" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="A51T"><circle cx="2384.800000" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H0Y992_HUMAN, Spermatogenesis-associated protein 24 (Fragment) (150aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="coiled_coil"><rect fill="#98E698" x="1037.266667" y="45" width="650.533333" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#7FFFFF" x="3314.133333" y="45" width="929.333333" height="18" filter="url(#ds)"/></a>
+<g transform="translate(2152.466667,42)"><a xlink:href="http://pfam.xfam.org/family/PF15175" xlink:title="Spermatogenesis-associated protein 24"><rect fill="#2dcf00" x="0" y="0" width="4135.533333" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="2067.766667" y="16">Spermatogenesis-associated protein 24</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="1037.266667" x2="1037.266667" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1037.266667" y="91">22</text><line x1="1687.800000" x2="1687.800000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1687.800000" y="91">36</text><line x1="2152.466667" x2="2152.466667" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2152.466667" y="91">46</text><line x1="2384.800000" x2="2384.800000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2384.800000" y="91">51</text><line x1="3314.133333" x2="3314.133333" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3314.133333" y="91">71</text><line x1="4243.466667" x2="4243.466667" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4243.466667" y="91">91</text><line x1="6288.000000" x2="6288.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6288.000000" y="91">135</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">150</text></g>
+</svg>

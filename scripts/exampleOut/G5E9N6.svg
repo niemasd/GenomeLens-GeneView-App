@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="3887.222222" x2="3887.222222" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="F30S"><circle cx="3887.222222" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="G5E9N6_HUMAN, Peroxisome biogenesis factor 13, isoform CRA_d (54aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3758.148148" y="47" width="3226.851852" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="660.370370" y="45" width="774.444444" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="2338.333333" y="45" width="1290.740741" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="144.074074" y="47" width="387.222222" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1563.888889" y="47" width="645.370370" height="14"/></a>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="660.370370" x2="660.370370" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="660.370370" y="91">5</text><line x1="1434.814815" x2="1434.814815" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1434.814815" y="91">11</text><line x1="2338.333333" x2="2338.333333" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2338.333333" y="91">18</text><line x1="3629.074074" x2="3629.074074" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3629.074074" y="91">28</text><line x1="3887.222222" x2="3887.222222" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3887.222222" y="91">30</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">54</text></g>
+</svg>

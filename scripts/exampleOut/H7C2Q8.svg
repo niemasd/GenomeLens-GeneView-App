@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="6676.080332" x2="6676.080332" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="N345I"><circle cx="6676.080332" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H7C2Q8_HUMAN, Probable rRNA-processing protein EBP2 (361aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="343.227147" y="47" width="77.229917" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="574.916898" y="47" width="57.922438" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="690.761773" y="47" width="19.307479" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1405.138504" y="47" width="-19.307479" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2563.587258" y="47" width="501.994460" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3606.191136" y="47" width="77.229917" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3722.036011" y="47" width="96.537396" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3915.110803" y="47" width="501.994460" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4513.642659" y="47" width="424.764543" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6849.847645" y="47" width="135.152355" height="14"/></a>
+<a xlink:title="coiled_coil"><rect fill="#7FFFFF" x="3915.110803" y="45" width="386.149584" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="1212.063712" y="45" width="173.767313" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="5845.858726" y="45" width="173.767313" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="864.529086" y="47" width="328.227147" height="14"/></a>
+<g transform="translate(1405.138504,42)"><a xlink:href="http://pfam.xfam.org/family/PF05890" xlink:title="Eukaryotic rRNA processing protein EBP2"><rect fill="#2dcf00" x="0" y="0" width="5425.401662" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="2712.700831" y="16">Eukaryotic rRNA processing protein EBP2</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="1212.063712" x2="1212.063712" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1212.063712" y="91">62</text><line x1="1405.138504" x2="1405.138504" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1405.138504" y="91">72</text><line x1="3915.110803" x2="3915.110803" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3915.110803" y="91">202</text><line x1="4301.260388" x2="4301.260388" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4301.260388" y="91">222</text><line x1="5845.858726" x2="5845.858726" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5845.858726" y="91">302</text><line x1="6019.626039" x2="6019.626039" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6019.626039" y="91">311</text><line x1="6676.080332" x2="6676.080332" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6676.080332" y="91">345</text><line x1="6830.540166" x2="6830.540166" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6830.540166" y="91">353</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">361</text></g>
+</svg>

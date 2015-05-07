@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="1229.515021" x2="1229.515021" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="A203T"><circle cx="1229.515021" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="F8W9U9_HUMAN, Rho GTPase-activating protein 21 (Fragment) (1165aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="20.982833" y="47" width="143.587983" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="176.536481" y="47" width="83.759657" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="290.210300" y="47" width="17.948498" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="487.643777" y="47" width="137.605150" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1079.944206" y="47" width="17.948498" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1151.738197" y="47" width="5.982833" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1235.497854" y="47" width="245.296137" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1516.690987" y="47" width="5.982833" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2132.922747" y="47" width="95.725322" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2240.613734" y="47" width="11.965665" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2270.527897" y="47" width="11.965665" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2420.098712" y="47" width="197.433476" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2820.948498" y="47" width="47.862661" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2898.725322" y="47" width="11.965665" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2940.605150" y="47" width="131.622318" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3365.386266" y="47" width="981.184549" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4855.111588" y="47" width="0.000000" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4920.922747" y="47" width="17.948498" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4962.802575" y="47" width="41.879828" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5034.596567" y="47" width="215.381974" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5387.583691" y="47" width="23.931330" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5788.433476" y="47" width="23.931330" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5824.330472" y="47" width="29.914163" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6183.300429" y="47" width="53.845494" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6368.768240" y="47" width="598.283262" height="14"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="6243.128755" y="45" width="119.656652" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="2061.128755" y="45" width="65.811159" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="2623.515021" y="45" width="83.759657" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="5417.497854" y="45" width="83.759657" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1618.399142" y="47" width="436.746781" height="14"/></a>
+<g transform="translate(481.660944,42)"><a xlink:href="http://pfam.xfam.org/family/PF00595" xlink:title="PDZ domain (Also known as DHR or GLGF)"><rect fill="#2dcf00" x="0" y="0" width="466.660944" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="233.330472" y="16">PDZ domain (Also known as DHR or GLGF)</text></a></g>
+<g transform="translate(5531.171674,42)"><a xlink:href="http://pfam.xfam.org/family/PF00169" xlink:title="PH domain"><rect fill="#ff5353" x="0" y="0" width="646.145923" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="323.072961" y="16">PH domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="481.660944" x2="481.660944" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="481.660944" y="91">78</text><line x1="948.321888" x2="948.321888" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="948.321888" y="91">156</text><line x1="1229.515021" x2="1229.515021" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1229.515021" y="91">203</text><line x1="2061.128755" x2="2061.128755" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2061.128755" y="91">342</text><line x1="2126.939914" x2="2126.939914" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2126.939914" y="91">353</text><line x1="2623.515021" x2="2623.515021" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2623.515021" y="91">436</text><line x1="2707.274678" x2="2707.274678" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2707.274678" y="91">450</text><line x1="5417.497854" x2="5417.497854" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5417.497854" y="91">903</text><line x1="5501.257511" x2="5501.257511" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5501.257511" y="91">917</text><line x1="5531.171674" x2="5531.171674" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5531.171674" y="91">922</text><line x1="6177.317597" x2="6177.317597" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6177.317597" y="91">1030</text><line x1="6243.128755" x2="6243.128755" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6243.128755" y="91">1041</text><line x1="6362.785408" x2="6362.785408" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6362.785408" y="91">1061</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">1165</text></g>
+</svg>

@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="744.842932" x2="744.842932" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="P40S"><circle cx="744.842932" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="D6RAX3_HUMAN, Protocadherin-1 (382aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="33.246073" y="47" width="54.738220" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="452.905759" y="47" width="127.722513" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1091.518325" y="47" width="109.476440" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1365.209424" y="47" width="18.246073" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2022.068063" y="47" width="91.230366" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2186.282723" y="47" width="54.738220" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2824.895288" y="47" width="109.476440" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3098.586387" y="47" width="18.246073" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3445.261780" y="47" width="36.492147" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3627.722513" y="47" width="164.214660" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3937.905759" y="47" width="127.722513" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4175.104712" y="47" width="145.968586" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4485.287958" y="47" width="255.445026" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4977.931937" y="47" width="18.246073" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6291.649215" y="47" width="693.350785" height="14"/></a>
+<a xlink:title="sig_p"><rect fill="#FFD27F" x="33.246073" y="45" width="1021.780105" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="690.104712" y="45" width="310.183246" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="6072.696335" y="45" width="200.706806" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5032.670157" y="47" width="1021.780105" height="14"/></a>
+<g transform="translate(1073.272251,42)"><a xlink:href="http://pfam.xfam.org/family/PF08266" xlink:title="Cadherin-like"><rect fill="#2dcf00" x="0" y="0" width="1532.670157" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="766.335079" y="16">Cadherin-like</text></a></g>
+<g transform="translate(3171.570681,42)"><a xlink:href="http://pfam.xfam.org/family/PF00028" xlink:title="Cadherin domain"><rect fill="#ff5353" x="0" y="0" width="1788.115183" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="894.057592" y="16">Cadherin domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="33.246073" x2="33.246073" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="33.246073" y="91">1</text><line x1="690.104712" x2="690.104712" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="690.104712" y="91">37</text><line x1="744.842932" x2="744.842932" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="744.842932" y="91">40</text><line x1="1000.287958" x2="1000.287958" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1000.287958" y="91">54</text><line x1="1073.272251" x2="1073.272251" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1073.272251" y="91">58</text><line x1="2605.942408" x2="2605.942408" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2605.942408" y="91">142</text><line x1="3171.570681" x2="3171.570681" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3171.570681" y="91">173</text><line x1="4959.685864" x2="4959.685864" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4959.685864" y="91">271</text><line x1="6072.696335" x2="6072.696335" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6072.696335" y="91">332</text><line x1="6273.403141" x2="6273.403141" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6273.403141" y="91">343</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">382</text></g>
+</svg>

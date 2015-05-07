@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="1212.300613" x2="1212.300613" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="S28N"><circle cx="1212.300613" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="G3V3B3_HUMAN, Protein sel-1 homolog 1 (Fragment) (163aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1041.257669" y="47" width="1026.257669" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2409.601227" y="47" width="171.042945" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3692.423313" y="47" width="1111.779141" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6386.349693" y="47" width="598.650307" height="14"/></a>
+<a xlink:title="sig_p"><rect fill="#FFD27F" x="57.760736" y="45" width="855.214724" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="2794.447853" y="45" width="855.214724" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="955.736196" y="45" width="42.760736" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="2623.404908" y="45" width="128.282209" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2751.687117" y="47" width="0.000000" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="955.736196" y="47" width="-42.760736" height="14"/></a>
+<g transform="translate(4846.963190,42)"><a xlink:href="http://pfam.xfam.org/family/PF00040" xlink:title="Fibronectin type II domain"><rect fill="#2dcf00" x="0" y="0" width="1453.865031" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="726.932515" y="16">Fibronectin type II domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="57.760736" x2="57.760736" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="57.760736" y="91">1</text><line x1="912.975460" x2="912.975460" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="912.975460" y="91">21</text><line x1="955.736196" x2="955.736196" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="955.736196" y="91">22</text><line x1="998.496933" x2="998.496933" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="998.496933" y="91">23</text><line x1="1212.300613" x2="1212.300613" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1212.300613" y="91">28</text><line x1="2623.404908" x2="2623.404908" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2623.404908" y="91">61</text><line x1="2751.687117" x2="2751.687117" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2751.687117" y="91">64</text><line x1="2794.447853" x2="2794.447853" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2794.447853" y="91">65</text><line x1="3649.662577" x2="3649.662577" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3649.662577" y="91">85</text><line x1="4846.963190" x2="4846.963190" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4846.963190" y="91">113</text><line x1="6300.828221" x2="6300.828221" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6300.828221" y="91">147</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">163</text></g>
+</svg>

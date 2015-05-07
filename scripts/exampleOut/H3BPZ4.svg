@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="6716.923077" x2="6716.923077" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="H175P"><circle cx="6716.923077" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H3BPZ4_HUMAN, SH2B adapter protein 1 (Fragment) (182aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="53.296703" y="47" width="382.967033" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2465.989011" y="47" width="842.527473" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3461.703297" y="47" width="114.890110" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3653.186813" y="47" width="191.483516" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4036.153846" y="47" width="1034.010989" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5682.912088" y="47" width="153.186813" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6563.736264" y="47" width="421.263736" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="5108.461538" y="45" width="536.153846" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="5874.395604" y="45" width="651.043956" height="18" filter="url(#ds)"/></a>
+<g transform="translate(474.560440,42)"><a xlink:href="http://pfam.xfam.org/family/PF00169" xlink:title="PH domain"><rect fill="#2dcf00" x="0" y="0" width="1953.131868" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="976.565934" y="16">PH domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="474.560440" x2="474.560440" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="474.560440" y="91">12</text><line x1="2427.692308" x2="2427.692308" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2427.692308" y="91">63</text><line x1="5108.461538" x2="5108.461538" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5108.461538" y="91">133</text><line x1="5644.615385" x2="5644.615385" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5644.615385" y="91">147</text><line x1="5874.395604" x2="5874.395604" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5874.395604" y="91">153</text><line x1="6525.439560" x2="6525.439560" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6525.439560" y="91">170</text><line x1="6716.923077" x2="6716.923077" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6716.923077" y="91">175</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">182</text></g>
+</svg>

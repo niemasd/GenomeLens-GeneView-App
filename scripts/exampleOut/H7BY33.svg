@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="1111.404494" x2="1111.404494" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="A112V"><circle cx="1111.404494" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H7BY33_HUMAN, Coiled-coil domain-containing protein 88B (712aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="24.789326" y="47" width="205.575843" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="249.943820" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="426.151685" y="47" width="29.367978" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="514.255618" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="543.623596" y="47" width="19.578652" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="582.780899" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="612.148876" y="47" width="39.157303" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="680.674157" y="47" width="176.207865" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="896.039326" y="47" width="19.578652" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1101.615169" y="47" width="19.578652" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1140.772472" y="47" width="58.735955" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1688.974719" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1718.342697" y="47" width="39.157303" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1806.446629" y="47" width="29.367978" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1855.393258" y="47" width="19.578652" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2198.019663" y="47" width="88.103933" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2560.224719" y="47" width="29.367978" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2609.171348" y="47" width="48.946629" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2677.696629" y="47" width="48.946629" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2883.272472" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2951.797753" y="47" width="19.578652" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3157.373596" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3186.741573" y="47" width="48.946629" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3500.000000" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3548.946629" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3901.362360" y="47" width="29.367978" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4018.834270" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4077.570225" y="47" width="29.367978" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4155.884831" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4195.042135" y="47" width="39.157303" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4459.353933" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4968.398876" y="47" width="1174.719101" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6250.800562" y="47" width="9.789326" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6289.957865" y="47" width="479.676966" height="14"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="269.522472" y="45" width="822.303371" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="1375.716292" y="45" width="812.514045" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="2403.595506" y="45" width="469.887640" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="2981.165730" y="45" width="675.463483" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="3734.943820" y="45" width="332.837079" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="4116.727528" y="45" width="303.469101" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="690.463483" y="45" width="137.050562" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="974.353933" y="45" width="107.682584" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="1473.609551" y="45" width="156.629213" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="2951.797753" y="45" width="19.578652" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="3206.320225" y="45" width="293.679775" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="4077.570225" y="45" width="29.367978" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="4850.926966" y="45" width="107.682584" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4537.668539" y="47" width="303.469101" height="14"/></a>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="269.522472" x2="269.522472" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="269.522472" y="91">26</text><line x1="690.463483" x2="690.463483" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="690.463483" y="91">69</text><line x1="827.514045" x2="827.514045" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="827.514045" y="91">83</text><line x1="974.353933" x2="974.353933" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="974.353933" y="91">98</text><line x1="1082.036517" x2="1082.036517" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1082.036517" y="91">109</text><line x1="1111.404494" x2="1111.404494" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1111.404494" y="91">112</text><line x1="1375.716292" x2="1375.716292" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1375.716292" y="91">139</text><line x1="1473.609551" x2="1473.609551" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1473.609551" y="91">149</text><line x1="1630.238764" x2="1630.238764" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1630.238764" y="91">165</text><line x1="2188.230337" x2="2188.230337" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2188.230337" y="91">222</text><line x1="2403.595506" x2="2403.595506" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2403.595506" y="91">244</text><line x1="2873.483146" x2="2873.483146" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2873.483146" y="91">292</text><line x1="2951.797753" x2="2951.797753" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2951.797753" y="91">300</text><line x1="2971.376404" x2="2971.376404" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2971.376404" y="91">302</text><line x1="3206.320225" x2="3206.320225" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3206.320225" y="91">326</text><line x1="3500.000000" x2="3500.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3500.000000" y="91">356</text><line x1="3656.629213" x2="3656.629213" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3656.629213" y="91">372</text><line x1="3734.943820" x2="3734.943820" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3734.943820" y="91">380</text><line x1="4067.780899" x2="4067.780899" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4067.780899" y="91">414</text><line x1="4106.938202" x2="4106.938202" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4106.938202" y="91">418</text><line x1="4420.196629" x2="4420.196629" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4420.196629" y="91">450</text><line x1="4850.926966" x2="4850.926966" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4850.926966" y="91">494</text><line x1="4958.609551" x2="4958.609551" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4958.609551" y="91">505</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">712</text></g>
+</svg>

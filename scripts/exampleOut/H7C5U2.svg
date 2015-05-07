@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="5316.371571" x2="5316.371571" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="T305M"><circle cx="5316.371571" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H7C5U2_HUMAN, Integrin beta (Fragment) (401aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="675.498753" y="47" width="17.381546" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="4412.531172" y="45" width="243.341646" height="18" filter="url(#ds)"/></a>
+<g transform="translate(32.381546,42)"><a xlink:href="http://pfam.xfam.org/family/PF00362" xlink:title="Integrin, beta chain"><rect fill="#2dcf00" x="0" y="0" width="1946.733167" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="973.366584" y="16">Integrin, beta chain</text></a></g>
+<g transform="translate(1979.114713,42)"><a xlink:href="http://pfam.xfam.org/family/PF00362" xlink:title="Integrin, beta chain"><rect fill="#2dcf00" x="0" y="0" width="695.261845" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="347.630923" y="16">Integrin, beta chain</text></a></g>
+<g transform="translate(5664.002494,42)"><a xlink:href="http://pfam.xfam.org/family/PF07965" xlink:title="Integrin beta tail domain"><rect fill="#ff5353" x="0" y="0" width="1320.997506" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="660.498753" y="16">Integrin beta tail domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="32.381546" x2="32.381546" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="32.381546" y="91">1</text><line x1="1979.114713" x2="1979.114713" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1979.114713" y="91">113</text><line x1="2674.376559" x2="2674.376559" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2674.376559" y="91">153</text><line x1="4412.531172" x2="4412.531172" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4412.531172" y="91">253</text><line x1="4655.872818" x2="4655.872818" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4655.872818" y="91">267</text><line x1="5316.371571" x2="5316.371571" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5316.371571" y="91">305</text><line x1="5664.002494" x2="5664.002494" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5664.002494" y="91">325</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">401</text></g>
+</svg>

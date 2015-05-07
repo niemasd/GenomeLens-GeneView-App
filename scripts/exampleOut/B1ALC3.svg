@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="1319.327485" x2="1319.327485" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="S96T"><circle cx="1319.327485" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="B1ALC3_HUMAN, Kinesin-like protein KIF12 (513aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1169.873294" y="47" width="27.173489" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1523.128655" y="47" width="81.520468" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2447.027290" y="47" width="13.586745" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3112.777778" y="47" width="271.734893" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4091.023392" y="47" width="13.586745" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4131.783626" y="47" width="163.040936" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4321.998051" y="47" width="27.173489" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5368.177388" y="47" width="67.933723" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5775.779727" y="47" width="27.173489" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5830.126706" y="47" width="40.760234" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6971.413255" y="47" width="13.586745" height="14"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="3398.099415" y="45" width="271.734893" height="18" filter="url(#ds)"/></a>
+<a xlink:title="coiled_coil"><rect fill="#98E698" x="3941.569201" y="45" width="557.056530" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="4716.013645" y="45" width="244.561404" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="5449.697856" y="45" width="298.908382" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="6101.861598" y="45" width="163.040936" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6278.489279" y="47" width="217.387914" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5898.060429" y="47" width="190.214425" height="14"/></a>
+<g transform="translate(28.586745,42)"><a xlink:href="http://pfam.xfam.org/family/PF00225" xlink:title="Kinesin motor domain"><rect fill="#2dcf00" x="0" y="0" width="3070.604288" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="1535.302144" y="16">Kinesin motor domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="28.586745" x2="28.586745" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="28.586745" y="91">1</text><line x1="1319.327485" x2="1319.327485" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1319.327485" y="91">96</text><line x1="3099.191033" x2="3099.191033" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3099.191033" y="91">227</text><line x1="3398.099415" x2="3398.099415" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3398.099415" y="91">249</text><line x1="3669.834308" x2="3669.834308" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3669.834308" y="91">269</text><line x1="3941.569201" x2="3941.569201" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3941.569201" y="91">289</text><line x1="4498.625731" x2="4498.625731" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4498.625731" y="91">330</text><line x1="4716.013645" x2="4716.013645" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4716.013645" y="91">346</text><line x1="4960.575049" x2="4960.575049" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4960.575049" y="91">364</text><line x1="5449.697856" x2="5449.697856" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5449.697856" y="91">400</text><line x1="5748.606238" x2="5748.606238" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5748.606238" y="91">422</text><line x1="6101.861598" x2="6101.861598" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6101.861598" y="91">448</text><line x1="6264.902534" x2="6264.902534" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6264.902534" y="91">460</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">513</text></g>
+</svg>

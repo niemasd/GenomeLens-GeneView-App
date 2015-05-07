@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="4468.055556" x2="4468.055556" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="N345S"><circle cx="4468.055556" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="F8VPL6_HUMAN, Zinc finger protein Eos (540aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="27.907407" y="47" width="709.907407" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="789.444444" y="47" width="38.722222" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="853.981481" y="47" width="129.074074" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1021.777778" y="47" width="38.722222" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1215.388889" y="47" width="180.703704" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2467.407407" y="47" width="38.722222" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3112.777778" y="47" width="12.907407" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3151.500000" y="47" width="51.629630" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3228.944444" y="47" width="90.351852" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3487.092593" y="47" width="64.537037" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3603.259259" y="47" width="77.444444" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3706.518519" y="47" width="12.907407" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4016.296296" y="47" width="25.814815" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4067.925926" y="47" width="25.814815" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4416.425926" y="47" width="12.907407" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5681.351852" y="47" width="464.666667" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="5552.277778" y="45" width="116.166667" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4635.851852" y="47" width="903.518519" height="14"/></a>
+<g transform="translate(1667.148148,42)"><a xlink:href="http://pfam.xfam.org/family/PF13465" xlink:title="Zinc-finger double domain"><rect fill="#2dcf00" x="0" y="0" width="322.685185" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="161.342593" y="16">Zinc-finger double domain</text></a></g>
+<g transform="translate(2028.555556,42)"><a xlink:href="http://pfam.xfam.org/family/PF13465" xlink:title="Zinc-finger double domain"><rect fill="#2dcf00" x="0" y="0" width="322.685185" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="161.342593" y="16">Zinc-finger double domain</text></a></g>
+<g transform="translate(2635.203704,42)"><a xlink:href="http://pfam.xfam.org/family/PF00096" xlink:title="Zinc finger, C2H2 type"><rect fill="#ff5353" x="0" y="0" width="296.870370" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="148.435185" y="16">Zinc finger, C2H2 type</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="1667.148148" x2="1667.148148" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1667.148148" y="91">128</text><line x1="1989.833333" x2="1989.833333" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1989.833333" y="91">153</text><line x1="2028.555556" x2="2028.555556" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2028.555556" y="91">156</text><line x1="2351.240741" x2="2351.240741" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2351.240741" y="91">181</text><line x1="2635.203704" x2="2635.203704" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2635.203704" y="91">203</text><line x1="2932.074074" x2="2932.074074" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2932.074074" y="91">226</text><line x1="4468.055556" x2="4468.055556" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4468.055556" y="91">345</text><line x1="5552.277778" x2="5552.277778" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5552.277778" y="91">429</text><line x1="5668.444444" x2="5668.444444" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5668.444444" y="91">438</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">540</text></g>
+</svg>

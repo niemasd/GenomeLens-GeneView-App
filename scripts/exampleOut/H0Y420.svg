@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="331.818182" x2="331.818182" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="A3V"><circle cx="331.818182" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H0Y420_HUMAN, Collagen alpha-1(XVII) chain (Fragment) (66aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6140.151515" y="47" width="844.848485" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="2338.333333" y="45" width="2534.545455" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="120.606061" y="47" width="105.606061" height="14"/></a>
+<g transform="translate(331.818182,42)"><a xlink:href="http://pfam.xfam.org/family/PF01391" xlink:title="Collagen triple helix repeat (20 copies)"><rect fill="#2dcf00" x="0" y="0" width="5702.727273" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="2851.363636" y="16">Collagen triple helix repeat (20 copies)</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="331.818182" x2="331.818182" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="331.818182" y="91">3</text><line x1="331.818182" x2="331.818182" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="331.818182" y="91">3</text><line x1="2338.333333" x2="2338.333333" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2338.333333" y="91">22</text><line x1="4872.878788" x2="4872.878788" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4872.878788" y="91">46</text><line x1="6034.545455" x2="6034.545455" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6034.545455" y="91">57</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">66</text></g>
+</svg>

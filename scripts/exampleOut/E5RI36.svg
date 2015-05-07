@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="2068.178295" x2="2068.178295" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="R76L"><circle cx="2068.178295" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="E5RI36_HUMAN, Regulating synaptic membrane exocytosis protein 2 (Fragment) (258aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="42.015504" y="47" width="135.077519" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1419.806202" y="47" width="243.139535" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1771.007752" y="47" width="567.325581" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="2392.364341" y="47" width="27.015504" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="204.108527" y="45" width="729.418605" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="1176.666667" y="45" width="216.124031" height="18" filter="url(#ds)"/></a>
+<g transform="translate(3959.263566,42)"><a xlink:href="http://pfam.xfam.org/family/PF00168" xlink:title="C2 domain"><rect fill="#2dcf00" x="0" y="0" width="2350.348837" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="1175.174419" y="16">C2 domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="204.108527" x2="204.108527" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="204.108527" y="91">7</text><line x1="933.527132" x2="933.527132" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="933.527132" y="91">34</text><line x1="1176.666667" x2="1176.666667" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1176.666667" y="91">43</text><line x1="1392.790698" x2="1392.790698" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1392.790698" y="91">51</text><line x1="2068.178295" x2="2068.178295" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2068.178295" y="91">76</text><line x1="3959.263566" x2="3959.263566" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3959.263566" y="91">146</text><line x1="6309.612403" x2="6309.612403" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6309.612403" y="91">233</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">258</text></g>
+</svg>

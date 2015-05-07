@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="6295.136519" x2="6295.136519" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="R264H"><circle cx="6295.136519" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="H7BZC7_HUMAN, Neurexin-2-alpha (Fragment) (293aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="157.730375" y="47" width="428.191126" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1156.843003" y="47" width="190.307167" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="942.747440" y="45" width="190.307167" height="18" filter="url(#ds)"/></a>
+<g transform="translate(2132.167235,42)"><a xlink:href="http://pfam.xfam.org/family/PF02210" xlink:title="Laminin G domain"><rect fill="#2dcf00" x="0" y="0" width="2997.337884" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="1498.668942" y="16">Laminin G domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="942.747440" x2="942.747440" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="942.747440" y="91">39</text><line x1="1133.054608" x2="1133.054608" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1133.054608" y="91">47</text><line x1="2132.167235" x2="2132.167235" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2132.167235" y="91">89</text><line x1="5129.505119" x2="5129.505119" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5129.505119" y="91">215</text><line x1="6295.136519" x2="6295.136519" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6295.136519" y="91">264</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">293</text></g>
+</svg>

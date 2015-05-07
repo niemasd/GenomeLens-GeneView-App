@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="2031.851064" x2="2031.851064" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="P68R"><circle cx="2031.851064" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="Q5SQD6_HUMAN, Uncharacterized protein C9orf47 (235aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="667.510638" y="47" width="563.531915" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1853.893617" y="47" width="29.659574" height="14"/></a>
+<a xlink:title="sig_p"><rect fill="#7FFFFF" x="44.659574" y="45" width="978.765957" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="3336.872340" y="45" width="652.510638" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="4048.702128" y="45" width="563.531915" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="4968.148936" y="45" width="444.893617" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="5591.000000" y="45" width="355.914894" height="18" filter="url(#ds)"/></a>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="44.659574" x2="44.659574" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="44.659574" y="91">1</text><line x1="1023.425532" x2="1023.425532" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="1023.425532" y="91">34</text><line x1="2031.851064" x2="2031.851064" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2031.851064" y="91">68</text><line x1="3336.872340" x2="3336.872340" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3336.872340" y="91">112</text><line x1="3989.382979" x2="3989.382979" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3989.382979" y="91">134</text><line x1="4048.702128" x2="4048.702128" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4048.702128" y="91">136</text><line x1="4612.234043" x2="4612.234043" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4612.234043" y="91">155</text><line x1="4968.148936" x2="4968.148936" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4968.148936" y="91">167</text><line x1="5413.042553" x2="5413.042553" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5413.042553" y="91">182</text><line x1="5591.000000" x2="5591.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5591.000000" y="91">188</text><line x1="5946.914894" x2="5946.914894" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5946.914894" y="91">200</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">235</text></g>
+</svg>

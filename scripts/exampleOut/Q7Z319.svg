@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="6900.258359" x2="6900.258359" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="A325V"><circle cx="6900.258359" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="Q7Z319_HUMAN, Putative uncharacterized protein DKFZp686E14208 (329aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="36.185410" y="47" width="190.668693" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5078.313070" y="47" width="42.370821" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5163.054711" y="47" width="21.185410" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5862.173252" y="47" width="338.966565" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6264.696049" y="47" width="21.185410" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6963.814590" y="47" width="21.185410" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="5946.914894" y="45" width="254.224924" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#7FFFFF" x="6518.920973" y="45" width="275.410334" height="18" filter="url(#ds)"/></a>
+<g transform="translate(502.264438,42)"><a xlink:href="http://pfam.xfam.org/family/PF00069" xlink:title="Protein kinase domain"><rect fill="#2dcf00" x="0" y="0" width="4554.863222" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="2277.431611" y="16">Protein kinase domain</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="502.264438" x2="502.264438" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="502.264438" y="91">23</text><line x1="5057.127660" x2="5057.127660" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5057.127660" y="91">238</text><line x1="5946.914894" x2="5946.914894" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5946.914894" y="91">280</text><line x1="6201.139818" x2="6201.139818" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6201.139818" y="91">292</text><line x1="6518.920973" x2="6518.920973" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6518.920973" y="91">307</text><line x1="6794.331307" x2="6794.331307" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6794.331307" y="91">320</text><line x1="6900.258359" x2="6900.258359" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6900.258359" y="91">325</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">329</text></g>
+</svg>

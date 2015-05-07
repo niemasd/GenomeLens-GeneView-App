@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="3260.291005" x2="3260.291005" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="E88D"><circle cx="3260.291005" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="D6REB3_HUMAN, Transcription factor HES-4 (189aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="863.201058" y="47" width="885.079365" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="4551.031746" y="47" width="405.661376" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="6210.555556" y="47" width="737.566138" height="14"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="236.269841" y="45" width="590.052910" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="4440.396825" y="45" width="700.687831" height="18" filter="url(#ds)"/></a>
+<a xlink:title="low_complexity"><rect fill="#C2DDFF" x="5251.719577" y="45" width="1733.280423" height="18" filter="url(#ds)"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="51.878307" y="47" width="147.513228" height="14"/></a>
+<g transform="translate(2817.751323,42)"><a xlink:href="http://pfam.xfam.org/family/PF07527" xlink:title="Hairy Orange"><rect fill="#2dcf00" x="0" y="0" width="1548.888889" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="774.444444" y="16">Hairy Orange</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="236.269841" x2="236.269841" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="236.269841" y="91">6</text><line x1="826.322751" x2="826.322751" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="826.322751" y="91">22</text><line x1="2817.751323" x2="2817.751323" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="2817.751323" y="91">76</text><line x1="3260.291005" x2="3260.291005" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="3260.291005" y="91">88</text><line x1="4366.640212" x2="4366.640212" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4366.640212" y="91">118</text><line x1="4440.396825" x2="4440.396825" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="4440.396825" y="91">120</text><line x1="5141.084656" x2="5141.084656" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5141.084656" y="91">139</text><line x1="5251.719577" x2="5251.719577" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5251.719577" y="91">142</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">189</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">189</text></g>
+</svg>

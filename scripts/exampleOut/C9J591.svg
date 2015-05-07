@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7000" height="111">
+<defs>
+  <filter id="ds" x="0" y="0">
+    <feOffset in="SourceAlpha" dx="2" dy="2" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+    <feGaussianBlur result="blurOut" stdDeviation="1" />
+    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+  </filter>
+  <pattern id="disordered-hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+    <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#000000" opacity="0.3" />
+  </pattern>
+</defs>
+<line x1="53.508287" x2="53.508287" y1="19" y2="47" stroke="#BABDB6" stroke-width="2"/><a xlink:title="M1MEAEEAQR?"><circle cx="53.508287" cy="19" r="4.000000" fill="#ff0000" /></a><a xlink:title="C9J591_HUMAN, Rho guanine nucleotide exchange factor 5 (Fragment) (181aa)"><rect fill="#BABDB6" x="15" y="47" width="6970" height="14"/></a><a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="53.508287" y="47" width="808.674033" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="1208.756906" y="47" width="2040.939227" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="3519.254144" y="47" width="77.016575" height="14"/></a>
+<a xlink:title="disorder"><rect fill="url(#disordered-hatch)" x="5367.651934" y="47" width="308.066298" height="14"/></a>
+<g transform="translate(53.508287,42)"><a xlink:href="http://pfam.xfam.org/family/PF15441" xlink:title="Rho guanine nucleotide exchange factor 5/35"><rect fill="#2dcf00" x="0" y="0" width="5275.635359" height="24" filter="url(#ds)"/><text style="font-size:12px;font-family:sans-serif;fill:#ffffff;" text-anchor="middle" x="2637.817680" y="16">Rho guanine nucleotide exchange factor 5/35</text></a></g>
+<g class="axis">
+<line x1="15" x2="6985" y1="76" y2="76" stroke="#AAAAAA" /><line x1="15" x2="15" y1="76" y2="81" stroke="#AAAAAA" /><line x1="15.000000" x2="15.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="15.000000" y="91">0</text><line x1="53.508287" x2="53.508287" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="53.508287" y="91">1</text><line x1="53.508287" x2="53.508287" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="53.508287" y="91">1</text><line x1="5329.143646" x2="5329.143646" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="5329.143646" y="91">138</text><line x1="6985.000000" x2="6985.000000" y1="76" y2="81" stroke="#AAAAAA" /><text style="font-size:10px;font-family:sans-serif;fill:#000000;" text-anchor="middle" x="6985.000000" y="91">181</text></g>
+</svg>
