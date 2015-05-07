@@ -30,11 +30,15 @@ def parseMutationList( geneDict ):
     return out
 
 def generateLollipop( gene ):
-    command = ["./lollipops","-labels"]
+    #command = ["./lollipops","-labels"]
+    command = ["lollipops","-w=7000"]
+    #command = ["./lollipops","-w=7000", "-labels"]
     #command.append("-o="+outFolder+"/"+gene.name+".svg")
     #command.append(gene.name)
-    command.append("-o="+outFolder+"/"+gene.uniprotID+".svg")
-    command.append("-U="+gene.uniprotID)
+    uniprotID = gene.uniprotID
+    uniprotID = uniprotID.replace("_HUMAN", "") # not sure if need this
+    command.append("-o="+outFolder+"/"+uniprotID+".svg")
+    command.append("-U="+uniprotID)
     for mutation in gene.AAChanges:
         # aaChange#color@size
         # if in patient
@@ -52,7 +56,7 @@ def generateLollipop( gene ):
         #edit = mutation.replace("\xe2\x80\x8f","")
         command.append(arg)
     print(" ".join(command))
-#    call(command)
+    call(command)
 
 def generateHTML( gene ):
     html = open(outFolder + "/pages/"+gene+".html",'w')
@@ -146,9 +150,10 @@ if __name__ == "__main__":
     for gene in genes.keys():
         # gene is a uniprotID. Make sure it actually is one, since
         # some were added as dummy values
-        if uniprotDict.get(gene) is None:
-            #continue
-            print "NOT IN uniprotDic " + gene
+        #if uniprotDict.get(gene) is None:
+        if gene not in uniprotDict.values() is None:
+            #print "NOT IN uniprotDic " + gene
+            continue
         #generateLollipop(gene,genesAndMutations) # add in to generate lollipops
         generateLollipop(genes[gene]) # add in to generate lollipops
         #generateHTML(gene)

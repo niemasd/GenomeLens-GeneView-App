@@ -1,10 +1,7 @@
 import vcf
 import sys
 import re
-#def myf():
-#    print len(p)
-#p=("one", "two", "three")
-#myf()
+
 #p = "s||||||s".split("|")
 #for s in p:
 #    print s == ""
@@ -13,7 +10,12 @@ import re
 #print len(sys.argv)
 vcfFile = open(sys.argv[1],'r')
 vcf_reader = vcf.Reader(vcfFile)
-#print vcf_reader.infos['HGVS_PROTEIN_VAR']
+#print vcf_reader.formats
+print vcf_reader.infos
+for rec in vcf_reader:
+    if "EFF" in rec.INFO:
+        #print str(rec) + "\t" + str(rec.INFO["EFF"])
+        print str(rec) + "\t" + str(rec.INFO)
 #print vcf_reader.infos['EFF'].desc
 #print re.search("\(.*\)", vcf_reader.infos['EFF'].desc).group()
 #print re.sub("(\()(.*)(\))", "\2", vcf_reader.infos['EFF'].desc)
@@ -28,19 +30,10 @@ vcf_reader = vcf.Reader(vcfFile)
 #        idx = headerTok.index(tok)
 #
 #print idx
-for record in vcf_reader:
+##for record in vcf_reader:
 ##    print record.INFO['EFF']
 #    #print record.INFO['GL']
-    #print record.INFO['HGVS_PROTEIN_VAR']
-     prot = record.INFO['HGVS_PROTEIN_VAR']
-     if all(entry is not None for entry in prot):
-         for entry in prot:
-             if ")" in entry: 
-                   sp = entry.split(":")
-                   refSeq = sp[0]
-                   aa = sp[1]
-                   print(refSeq)
-                   print(aa)
+#    print record.INFO['HGVS_PROTEIN_VAR']
 #record = vcf_reader.next()
 #print record.INFO['EFF']
 #print "\n"

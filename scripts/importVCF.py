@@ -70,14 +70,14 @@ def importContextVCF(fileName, contextSrc, uniprotDict):
                         if uniprotID is None:
                             # FIXME try with refSeq or skip?
                             uniprotID = refSeq
-                        else:
-                            print "NOT NONE " + uniprotID
+                        #else:
+                        #    print "NOT NONE " + uniprotID
                         
                         #if uniprotID == "": # no uniprot or refseq
                         if len(uniprotID) == 0: # no uniprot or refseq
                             uniprotID = currGeneSet[0] # try with gene name or skip? FIXME
-                        else:
-                            print "NOT LEN == 0 " + uniprotID
+                        #else:
+                        #    print "NOT LEN == 0 " + uniprotID
                             #print "CHANGED " + entry
                         #print "\"" + uniprotID  + "\""
                         # store
@@ -155,7 +155,11 @@ def importPatientVCF(fileName, geneDict, uniprotDict):
     
     # iterate over lines in vcf file
     for record in vcf_reader:
-        effEntries = record.INFO['EFF']
+        print record.INFO
+        if 'EFF' in record.INFO:
+            effEntries = record.INFO['EFF']
+        else:
+            continue
         for entry in effEntries:
             # geneAAlist = [gene name, aa change, ensmblID]
             geneAAlist = parseEff(entry, geneNameIdx, aaIdx, ensemblIdx)

@@ -18,11 +18,13 @@ def parseDAT(f):
             if parts[0] not in genes:
                 genes[parts[0]] = [[],[],'']
             genes[parts[0]][1].append(parts[2])
-        elif 'UniProtKB-AC\t' in line:
+        #elif 'UniProtKB-AC\t' in line:
+        elif 'UniProtKB-ID\t' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
                 genes[parts[0]] = [[],[],'']
             genes[parts[0]][2] = parts[2]
+            #print "UNIPROT: " + parts[2]
     dic = {}
     for gene in genes:
         refseq,ensembl,uniprot = genes[gene]
@@ -34,11 +36,11 @@ def parseDAT(f):
         #dic[parts[0]] = parts[2]
     return dic
 
-d = parseDAT(open('../HUMAN_9606_idmapping.dat'))
-for k in d.keys():
-    print "KEY: " + k
-    #print "VALUE: " + d.get(k)
-    print "VALUE: " + d[k]
-    print
-#print d.keys()
-#print len(d)
+#d = parseDAT(open('../HUMAN_9606_idmapping.dat'))
+#for k in d.keys():
+#    print "KEY: " + k
+#    #print "VALUE: " + d.get(k)
+#    print "VALUE: " + d[k]
+#    print
+##print d.keys()
+##print len(d)
