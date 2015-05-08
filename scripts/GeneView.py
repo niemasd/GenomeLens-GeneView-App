@@ -56,3 +56,12 @@ if __name__ == "__main__":
             #print "NOT IN uniprotDic " + gene
             continue
         generateLollipop(genes[gene])
+    # create uniprots.txt file (for views.py)
+    uniprotsFile = open(outFolder + "/uniprots.txt",'w')
+    for file in glob.glob(outfolder + "/*.svg"):
+        if '/' in file:
+            sp = file.split('/')
+        elif '\\' in file:
+            sp = file.split('\\')
+        uniprotsFile.write(sp[len(sp)-1].split('.')[0] + '\n')
+    uniprotsFile.close()
