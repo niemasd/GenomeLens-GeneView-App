@@ -52,8 +52,7 @@ if __name__ == "__main__":
     for gene in genes.keys():
         # gene is a uniprotID. Make sure it actually is one, since
         # some were added as dummy values
-        #if uniprotDict.get(gene) is None:
-        if gene not in uniprotDict.values() is None:
+        if gene not in uniprotDict.values(): # originally had 'is None:' at the end
             #print "NOT IN uniprotDic " + gene
             continue
-        generateLollipop(genes[gene]) # add in to generate lollipops
+        generateLollipop(genes[gene])
