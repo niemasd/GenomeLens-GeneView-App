@@ -3,7 +3,7 @@ colorPat = "ff0000" # red
 colorNonPat = "00ccff" # light blue
 
 def generateLollipop( gene ):
-    command = ["lollipops","-w=7000"]
+    command = ["./lollipops","-w=7000"]
     uniprotID = gene.uniprotID
     uniprotID = uniprotID.replace("_HUMAN", "") # not sure if need this
     command.append("-o="+outFolder+"/"+uniprotID+".svg")
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         generateLollipop(genes[gene])
     # create uniprots.txt file (for views.py)
     uniprotsFile = open(outFolder + "/uniprots.txt",'w')
-    for file in glob.glob(outfolder + "/*.svg"):
+    for file in glob.glob(outFolder + "/*.svg"):
         if '/' in file:
             sp = file.split('/')
         elif '\\' in file:

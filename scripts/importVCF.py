@@ -155,7 +155,7 @@ def importPatientVCF(fileName, geneDict, uniprotDict):
     
     # iterate over lines in vcf file
     for record in vcf_reader:
-        print record.INFO
+        #print record.INFO
         if 'EFF' in record.INFO:
             effEntries = record.INFO['EFF']
         else:
