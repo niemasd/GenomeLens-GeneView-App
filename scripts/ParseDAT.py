@@ -6,33 +6,29 @@
 
 
 def parseDAT(f):
-    genes = {} # genes[key] = [RefSeq,Ensembl_TRS,UniProtKB-AC,gene_name]
+    genes = {} # genes[uniprot] = [RefSeq,Ensembl_TRS,gene_name]
     for line in f:
         if 'RefSeq' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
-                genes[parts[0]] = [[],[],'','']
+                genes[parts[0]] = [[],[],'']
             genes[parts[0]][0].append(parts[2])
         elif 'ChiTaRS\t' in line or 'GeneWiki\t' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
-                genes[parts[0]] = [[],[],'','']
-            genes[parts[0]][3] = parts[2]
+                genes[parts[0]] = [[],[],'']
+            genes[parts[0]][2] = parts[2]
         elif 'Ensembl_TRS\t' in line:
             parts = line.strip().split('\t')
             if parts[0] not in genes:
-                genes[parts[0]] = [[],[],'','']
+                genes[parts[0]] = [[],[],'']
             genes[parts[0]][1].append(parts[2])
-        #elif 'UniProtKB-AC\t' in line:
-        elif 'UniProtKB-ID\t' in line:
-            parts = line.strip().split('\t')
-            if parts[0] not in genes:
-                genes[parts[0]] = [[],[],'','']
-            genes[parts[0]][2] = parts[2]
-            #print "UNIPROT: " + parts[2]
     dic = {}
-    for key in genes:
-        refseq,ensembl,uniprot,genename = genes[key]
+    for uniprot in genes:
+        refseq,ensembl,genename = genes[uniprot]
+        #for now, only do entries with both uniprot and genename
+        if genename == '':
+            continue
         for r in refseq:
             dic[r] = (uniprot,genename)
         for e in ensembl:
