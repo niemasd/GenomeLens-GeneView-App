@@ -66,10 +66,16 @@ def importContextVCF(fileName, contextSrc, uniprotDict):
 
                         # translate from refSeq to uniprot
                         #uniprotID = uniprotDict[refSeq]
-                        uniprotID = uniprotDict.get(refSeq)
-                        if uniprotID is None:
+                        #uniprotID,genename = uniprotDict.get(refSeq)
+                        uni_name_tup = uniprotDict.get(refSeq)
+                        #if uniprotID is None:
+                        if uni_name_tup is None:
                             # FIXME try with refSeq or skip?
                             uniprotID = refSeq
+                            genename = ""
+                        else:
+                            uniprotID = uni_name_tup[0]
+                            genename = uni_name_tup[1]
                         #else:
                         #    print "NOT NONE " + uniprotID
                         
@@ -90,7 +96,9 @@ def importContextVCF(fileName, contextSrc, uniprotDict):
                         else:
                             # add new gene to dict, default inPat to False
                             #geneDict[currGene] = Gene(currGene, "", refSeq, uniprotID, currAA, maf, False)
-                            geneDict[uniprotID] = Gene(uniprotID, "", refSeq, uniprotID, aa, maf, False)
+                            #geneDict[uniprotID] = Gene(uniprotID, "", refSeq, uniprotID, aa, maf, False)
+                            #geneDict[uniprotID] = Gene("", "", refSeq, uniprotID, aa, maf, False)
+                            geneDict[uniprotID] = Gene(genename, "", refSeq, uniprotID, aa, maf, False)
     
             #currGeneSet = record.INFO[infoGeneName] # gene names
             #maf = record.INFO[infoMAF] # minor allele freqs
@@ -174,12 +182,16 @@ def importPatientVCF(fileName, geneDict, uniprotDict):
 
             # get uniprotID
             #uniprotID = uniprotDict[geneAAlist[3]]
-            uniprotID = uniprotDict.get(ensemblID)
+            #uniprotID,genenameDictVal = uniprotDict.get(ensemblID) 
+            uni_name_tup = uniprotDict.get(ensemblID) # TODO add error checking here between SnpEff's gene name, and the one we get from the dictionary
 
             #print "UNCHANGED " + str(uniprotID)
-            if uniprotID is None:
+            #if uniprotID is None:
+            if uni_name_tup is None:
                 # FIXME try with ensemblID? or skip?
                 uniprotID = ensemblID
+            else:
+                uniprotID = uni_name_tup[0]
 
             if len(uniprotID) == 0:
                 uniprotID = geneName # try with gene name to match context vcf or skip? FIXME
@@ -191,11 +203,13 @@ def importPatientVCF(fileName, geneDict, uniprotDict):
             if uniprotID in geneDict: # store by uniprot ID
                 #geneDict[geneAAlist[2]].addAAmaf(geneAAlist[1], None, True)
                 geneDict[uniprotID].addAAmaf(aa, None, True)
+                geneDict[uniprotID].addGeneName(geneName)
             # else, make a new Gene obj
             else:
                 #geneDict[geneAAlist[2]] = Gene(geneAAlist[0], geneAAlist[2], uniprotID, geneAAlist[1], None, True)
                 #geneDict[uniprotID] = Gene(geneAAlist[0], geneAAlist[2], "", uniprotID, geneAAlist[1], None, True)
-                geneDict[uniprotID] = Gene(uniprotID, ensemblID, "", uniprotID, aa, None, True)
+                #geneDict[uniprotID] = Gene(uniprotID, ensemblID, "", uniprotID, aa, None, True)
+                geneDict[uniprotID] = Gene(geneName, ensemblID, "", uniprotID, aa, None, True)
  
 
 def importVCF(refFile, refType, patFile, uniprotDict):

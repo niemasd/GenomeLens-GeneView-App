@@ -26,9 +26,11 @@ def parseDAT(f):
     dic = {}
     for uniprot in genes:
         refseq,ensembl,genename = genes[uniprot]
-        #for now, only do entries with both uniprot and genename
-        if genename == '':
-            continue
+        ##for now, only do entries with both uniprot and genename
+        #if genename == '':
+        #    continue
+        if '-' in uniprot:
+            uniprot = uniprot.split('-')[0]
         for r in refseq:
             dic[r] = (uniprot,genename)
         for e in ensembl:
@@ -37,11 +39,11 @@ def parseDAT(f):
         #dic[parts[0]] = parts[2]
     return dic
 
-#d = parseDAT(open('../HUMAN_9606_idmapping.dat'))
+#d = parseDAT(open('../../input/HUMAN_9606_idmapping.dat'))
 #for k in d.keys():
 #    print "KEY: " + k
 #    #print "VALUE: " + d.get(k)
-#    print "VALUE: " + d[k]
+#    print "VALUE: " + d[k][0] + ", " + d[k][1]
 #    print
 ##print d.keys()
 ##print len(d)

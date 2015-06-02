@@ -6,7 +6,8 @@ def generateLollipop( gene ):
     command = ["./lollipops","-w=7000"]
     uniprotID = gene.uniprotID
     uniprotID = uniprotID.replace("_HUMAN", "") # not sure if need this
-    command.append("-o="+outFolder+"/"+uniprotID+".svg")
+    #command.append("-o="+outFolder+"/"+uniprotID+".svg")
+    command.append("-o="+outFolder+"/"+gene.name+ "_" + uniprotID + ".svg")
     command.append("-U="+uniprotID)
     for mutation in gene.AAChanges:
         # aaChange#color@size
@@ -24,8 +25,10 @@ def generateLollipop( gene ):
             arg += "@" + str(size)
         #edit = mutation.replace("\xe2\x80\x8f","")
         command.append(arg)
+    print("Processing " + gene.name)
     print(" ".join(command))
     call(command)
+    print("\n")
 
 import sys
 import os
@@ -52,9 +55,9 @@ if __name__ == "__main__":
     for gene in genes.keys():
         # gene is a uniprotID. Make sure it actually is one, since
         # some were added as dummy values
-        if gene not in uniprotDict.values(): # originally had 'is None:' at the end
-            #print "NOT IN uniprotDic " + gene
-            continue
+        #if gene not in uniprotDict.values(): # originally had 'is None:' at the end
+        #    #print "NOT IN uniprotDic " + gene
+        #    continue
         generateLollipop(genes[gene])
     # create uniprots.txt file (for views.py)
     uniprotsFile = open(outFolder + "/uniprots.txt",'w')

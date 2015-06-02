@@ -67,3 +67,16 @@ class Gene:
     def anyInPat(self):
         return any(self.inPat.values())
 
+    # update geneName based on SnpEff data
+    def addGeneName(self, geneName):
+        # don't have a name yet
+        if len(self.name) == 0:
+            # the string passed in isn't empty
+            if len(geneName) != 0:
+                self.name = geneName
+            # if the passed in string is empty, don't do anything
+        # else, have a name already. Sanity check- is it the same?
+        else:
+            if self.name != geneName:
+                print ("ERROR: " + str(self.name) + " does not match " + str(geneName) + ". Taking SnpEff's " + str(geneName) + ".")
+                self.name = geneName
